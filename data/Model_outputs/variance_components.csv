@@ -1,0 +1,5 @@
+"","Variance Component","Posterior Mode","Lower Credible Interval","Upper Credible Interval"
+"1","Model 1 Phylogenetic Variance","0.6770","0.3390","0.7815"
+"2","Model 1 Species Variance","0.3295","0.1783","0.5703"
+"3","Model 2 Phylogenetic Variance","0.5997","0.3007","0.8061"
+"4","Model 2 Species Variance","0.3612","0.0842","0.4347"
