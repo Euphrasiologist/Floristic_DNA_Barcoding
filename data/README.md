@@ -1,6 +1,3 @@
 ## Data needed to reconstruct analyses
 
-This folder contains the data needed to reconstruct all analyses in the manuscript:
-
-Title: Floristic DNA Barcoding reveals the landscape of hybridisation in the British flora.
-Authors: Max Brown, Jarrod Hadfield, Peter M. Hollingsworth, Alex D. Twyford 
+mcmc.vcv5.RData (in the Backups folder) is omitted because it is a very large file, please contact me (max.brown@ed.ac.uk) to receive a copy.

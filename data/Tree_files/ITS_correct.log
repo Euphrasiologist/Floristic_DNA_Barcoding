@@ -1,0 +1,2296 @@
+IQ-TREE multicore version 1.7-beta9 for Linux 64-bit built Feb 19 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    sarlacc.bio.ed.ac.uk (AVX2, FMA3, 189 GB RAM)
+Command: /localdisk/home/s1583628/programs/iqtree-1.7-beta9-Linux/bin/iqtree -s merged_alignmentsmatKrbcLITS_250419_corrected.phy -spp UK_ITS_matK_rbcL_concat_partitionfile250419.nexus -m TESTNEWMERGE -bb 1000 -pre ITS_correct -g constraint_tree3.newick
+Seed:    472838 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Apr 26 14:22:46 2019
+Kernel:  AVX+FMA - 1 threads (32 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 32 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading partition model file UK_ITS_matK_rbcL_concat_partitionfile250419.nexus ...
+Reading alignment file merged_alignmentsmatKrbcLITS_250419_corrected.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+WARNING: 2454 sites contain only gaps or ambiguous characters.
+Alignment has 1421 sequences with 38955 columns, 7836 distinct patterns
+5094 parsimony-informative, 3265 singleton sites, 30595 constant sites
+                                 Gap/Ambiguity  Composition  p-value
+   1  Acer_campestre                    96.58%    failed      0.00%
+   2  Achillea_maritima                 96.85%    failed      0.00%
+   3  Achillea_millefolium              95.46%    failed      0.00%
+   4  Achillea_ptarmica                 95.46%    failed      0.00%
+   5  Aconitum_napellus                 95.44%    failed      0.00%
+   6  Actaea_spicata                    96.57%    failed      0.00%
+   7  Adonis_annua                      95.53%    failed      0.00%
+   8  Adoxa_moschatellina               95.43%    failed      0.01%
+   9  Aegopodium_podagraria             95.43%    failed      0.46%
+  10  Aethusa_cynapium                  95.43%    failed      0.70%
+  11  Agrimonia_eupatoria               95.53%    failed      0.83%
+  12  Agrimonia_procera                 95.53%    failed      0.83%
+  13  Agrostemma_githago                95.42%    failed      0.06%
+  14  Agrostis_canina                   95.44%    failed      0.79%
+  15  Agrostis_capillaris               95.44%    failed      0.92%
+  16  Agrostis_curtisii                 98.61%    passed     27.07%
+  17  Agrostis_gigantea                 95.44%    failed      0.60%
+  18  Agrostis_stolonifera              95.44%    failed      0.58%
+  19  Agrostis_vinealis                 95.44%    failed      0.79%
+  20  Aira_caryophyllea                 95.50%    failed      0.84%
+  21  Aira_praecox                      96.63%    failed      0.00%
+  22  Ajuga_chamaepitys                 96.57%    failed      0.00%
+  23  Ajuga_pyramidalis                 95.40%    failed      0.67%
+  24  Ajuga_reptans                     95.40%    failed      0.77%
+  25  Alchemilla_acutiloba              95.48%    failed      0.00%
+  26  Alchemilla_alpina                 95.49%    failed      0.00%
+  27  Alchemilla_cairnwellensis         96.61%    failed      0.00%
+  28  Alchemilla_conjuncta              98.88%    failed      0.54%
+  29  Alchemilla_filicaulis             95.57%    failed      0.00%
+  30  Alchemilla_glabra                 95.55%    failed      0.00%
+  31  Alchemilla_glaucescens            95.63%    failed      0.00%
+  32  Alchemilla_glomerulans            95.48%    failed      0.00%
+  33  Alchemilla_micans                 97.49%    passed     50.01%
+  34  Alchemilla_monticola              98.61%    passed     22.28%
+  35  Alchemilla_subcrenata             97.48%    passed     58.62%
+  36  Alchemilla_wichurae               95.48%    failed      0.00%
+  37  Alchemilla_xanthochlora           95.56%    failed      0.00%
+  38  Alisma_gramineum                  95.28%    failed      0.00%
+  39  Alisma_lanceolatum                95.28%    failed      0.00%
+  40  Alisma_plantago_aquatica          95.28%    failed      0.00%
+  41  Alliaria_petiolata                95.60%    failed      0.00%
+  42  Allium_ampeloprasum               95.33%    failed      0.00%
+  43  Allium_oleraceum                  95.36%    failed      0.00%
+  44  Allium_schoenoprasum              95.34%    failed      0.00%
+  45  Allium_scorodoprasum              95.33%    failed      0.00%
+  46  Allium_sphaerocephalon            98.61%    passed     12.30%
+  47  Allium_ursinum                    95.33%    failed      0.00%
+  48  Allium_vineale                    95.33%    failed      0.00%
+  49  Alnus_glutinosa                   95.73%    failed      3.54%
+  50  Alopecurus_aequalis               96.58%    failed      0.00%
+  51  Alopecurus_bulbosus               96.58%    failed      0.00%
+  52  Alopecurus_geniculatus            95.44%    failed      0.48%
+  53  Alopecurus_magellanicus           96.58%    failed      0.00%
+  54  Alopecurus_myosuroides            96.58%    failed      0.00%
+  55  Alopecurus_pratensis              96.58%    failed      0.00%
+  56  Althaea_officinalis               95.43%    failed      0.01%
+  57  Ammophila_arenaria                95.44%    failed      0.40%
+  58  Anacamptis_pyramidalis            95.40%    failed      0.00%
+  59  Anagallis_arvensis                95.66%    failed      0.00%
+  60  Anagallis_minima                  98.61%    passed     30.94%
+  61  Anagallis_tenella                 95.42%    failed      0.03%
+  62  Anchusa_arvensis                  96.65%    failed      0.00%
+  63  Andromeda_polifolia               95.42%    failed      0.00%
+  64  Anemone_nemorosa                  95.45%    failed      0.01%
+  65  Angelica_sylvestris               95.43%    failed      0.32%
+  66  Anisantha_sterilis                95.45%    failed      0.15%
+  67  Antennaria_dioica                 95.42%    failed      0.00%
+  68  Anthemis_arvensis                 96.58%    failed      0.00%
+  69  Anthemis_cotula                   96.58%    failed      0.00%
+  70  Anthoxanthum_odoratum             95.44%    failed      0.04%
+  71  Anthriscus_caucalis               95.42%    failed      0.00%
+  72  Anthriscus_sylvestris             95.42%    failed      0.00%
+  73  Anthyllis_vulneraria              95.44%    failed      0.00%
+  74  Apera_spica_venti                 95.50%    failed      0.97%
+  75  Aphanes_arvensis                  95.48%    failed      0.00%
+  76  Aphanes_australis                 95.48%    failed      0.00%
+  77  Apium_graveolens                  95.52%    failed      0.05%
+  78  Apium_inundatum                   97.49%    passed     20.24%
+  79  Apium_nodiflorum                  95.46%    failed      0.18%
+  80  Apium_repens                      95.46%    failed      0.18%
+  81  Aquilegia_vulgaris                97.47%    failed      2.02%
+  82  Arabidopsis_thaliana              95.55%    failed      0.00%
+  83  Arabis_alpina                     95.56%    failed      0.00%
+  84  Arabis_hirsuta                    95.56%    failed      0.00%
+  85  Arabis_petraea                    95.56%    failed      0.00%
+  86  Arabis_scabra                     95.56%    failed      0.00%
+  87  Arctium_lappa                     95.42%    failed      0.18%
+  88  Arctium_minus                     95.42%    failed      0.10%
+  89  Arctostaphylos_alpinus            95.42%    failed      0.00%
+  90  Arctostaphylos_uva_ursi           95.43%    failed      0.00%
+  91  Arenaria_norvegica                95.43%    failed      0.00%
+  92  Arenaria_serpyllifolia            95.43%    failed      0.00%
+  93  Armeria_maritima                  95.38%    failed      0.00%
+  94  Armoracia_rusticana               96.62%    failed      0.00%
+  95  Arnoseris_minima                  95.40%    failed      0.01%
+  96  Arrhenatherum_elatius             95.43%    failed      0.04%
+  97  Artemisia_absinthium              96.57%    failed      0.00%
+  98  Artemisia_campestris              95.52%    failed      0.01%
+  99  Artemisia_maritima                98.61%    passed      6.08%
+ 100  Artemisia_norvegica               95.42%    failed      0.00%
+ 101  Artemisia_vulgaris                95.43%    failed      0.00%
+ 102  Arum_italicum                     96.57%    failed      0.00%
+ 103  Arum_maculatum                    96.57%    failed      0.00%
+ 104  Asparagus_officinalis             95.32%    failed      0.07%
+ 105  Asparagus_prostratus              95.32%    failed      0.07%
+ 106  Asperula_cynanchica               98.61%    passed     20.54%
+ 107  Aster_linosyris                   96.58%    failed      0.00%
+ 108  Aster_tripolium                   96.58%    failed      0.00%
+ 109  Astragalus_alpinus                95.45%    failed      0.00%
+ 110  Astragalus_danicus                95.45%    failed      0.00%
+ 111  Astragalus_glycyphyllos           96.58%    failed      0.00%
+ 112  Atriplex_glabriuscula             96.58%    failed      0.00%
+ 113  Atriplex_laciniata                95.40%    failed      0.00%
+ 114  Atriplex_littoralis               95.42%    failed      0.03%
+ 115  Atriplex_longipes                 95.41%    failed      0.02%
+ 116  Atriplex_patula                   95.41%    failed      0.02%
+ 117  Atriplex_portulacoides            95.42%    failed      0.00%
+ 118  Atriplex_praecox                  95.42%    failed      0.02%
+ 119  Atropa_belladonna                 95.53%    failed      1.24%
+ 120  Avena_fatua                       95.45%    failed      0.11%
+ 121  Avenula_pratensis                 96.61%    failed      0.00%
+ 122  Avenula_pubescens                 96.61%    failed      0.00%
+ 123  Baldellia_ranunculoides           96.65%    failed      0.00%
+ 124  Ballota_nigra                     96.60%    failed      0.00%
+ 125  Barbarea_vulgaris                 95.55%    failed      0.00%
+ 126  Bartsia_alpina                    95.43%    failed      0.08%
+ 127  Bellis_perennis                   95.45%    failed      0.00%
+ 128  Berberis_vulgaris                 98.85%    failed      1.43%
+ 129  Berula_erecta                     95.42%    failed      0.22%
+ 130  Beta_vulgaris                     96.58%    failed      0.00%
+ 131  Betula_nana                       95.41%    failed      0.02%
+ 132  Betula_pendula                    95.41%    failed      0.03%
+ 133  Betula_pubescens                  95.41%    failed      0.03%
+ 134  Bidens_cernua                     95.39%    failed      0.00%
+ 135  Bidens_tripartita                 95.40%    failed      0.00%
+ 136  Blackstonia_perfoliata            97.44%    passed     30.61%
+ 137  Blysmus_compressus                96.58%    failed      0.00%
+ 138  Blysmus_rufus                     98.62%    failed      4.33%
+ 139  Bolboschoenus_maritimus           95.45%    failed      0.00%
+ 140  Brachypodium_pinnatum             96.58%    failed      0.00%
+ 141  Brachypodium_rupestre             95.44%    failed      3.80%
+ 142  Brachypodium_sylvaticum           95.67%    failed      0.32%
+ 143  Brassica_nigra                    95.57%    failed      0.00%
+ 144  Brassica_oleracea                 95.57%    failed      0.00%
+ 145  Brassica_rapa                     95.57%    failed      0.00%
+ 146  Briza_media                       95.44%    failed      0.25%
+ 147  Briza_minor                       97.48%    passed     17.46%
+ 148  Bromopsis_benekenii               95.44%    failed      0.16%
+ 149  Bromopsis_erecta                  95.44%    failed      0.13%
+ 150  Bromopsis_ramosa                  96.58%    failed      0.00%
+ 151  Bromus_commutatus                 95.44%    failed      0.02%
+ 152  Bromus_hordeaceus                 95.44%    failed      0.02%
+ 153  Bromus_interruptus                95.45%    failed      0.02%
+ 154  Bromus_racemosus                  95.44%    failed      0.02%
+ 155  Bromus_secalinus                  95.44%    failed      0.03%
+ 156  Bryonia_dioica                    95.35%    failed      4.03%
+ 157  Bunium_bulbocastanum              95.44%    failed      1.08%
+ 158  Bupleurum_baldense                95.42%    failed      0.19%
+ 159  Bupleurum_rotundifolium           95.43%    failed      0.46%
+ 160  Bupleurum_tenuissimum             95.44%    passed     12.46%
+ 161  Butomus_umbellatus                96.62%    failed      0.00%
+ 162  Buxus_sempervirens                96.64%    failed      0.00%
+ 163  Cakile_maritima                   95.57%    failed      0.00%
+ 164  Calamagrostis_canescens           95.45%    failed      2.07%
+ 165  Calamagrostis_epigejos            95.44%    failed      0.55%
+ 166  Calamagrostis_purpurea            95.45%    failed      1.69%
+ 167  Calamagrostis_scotica             95.46%    failed      1.12%
+ 168  Calamagrostis_stricta             95.56%    failed      0.51%
+ 169  Callitriche_brutia                95.46%    failed      0.00%
+ 170  Callitriche_hamulata              95.51%    failed      0.00%
+ 171  Callitriche_hermaphroditica       95.50%    failed      0.00%
+ 172  Callitriche_obtusangula           95.46%    failed      0.00%
+ 173  Callitriche_platycarpa            95.49%    failed      0.00%
+ 174  Callitriche_stagnalis             95.53%    failed      0.00%
+ 175  Callitriche_truncata              95.53%    failed      0.00%
+ 176  Calluna_vulgaris                  95.49%    failed      0.01%
+ 177  Caltha_palustris                  95.42%    failed      0.00%
+ 178  Calystegia_sepium                 95.41%    failed      0.88%
+ 179  Calystegia_soldanella             95.40%    failed      1.08%
+ 180  Camelina_sativa                   95.58%    failed      0.00%
+ 181  Campanula_glomerata               95.31%    failed      4.51%
+ 182  Campanula_latifolia               95.31%    failed      1.68%
+ 183  Campanula_patula                  95.34%    failed      0.00%
+ 184  Campanula_rapunculus              95.34%    failed      0.00%
+ 185  Campanula_rotundifolia            95.41%    failed      0.01%
+ 186  Campanula_trachelium              95.31%    failed      3.99%
+ 187  Capsella_bursa_pastoris           95.57%    failed      0.00%
+ 188  Cardamine_amara                   95.68%    failed      0.00%
+ 189  Cardamine_bulbifera               97.55%    passed     54.85%
+ 190  Cardamine_flexuosa                95.55%    failed      0.00%
+ 191  Cardamine_hirsuta                 95.55%    failed      0.00%
+ 192  Cardamine_impatiens               95.58%    failed      0.00%
+ 193  Cardamine_pratensis               95.55%    failed      0.00%
+ 194  Carduus_crispus                   95.42%    failed      0.04%
+ 195  Carduus_nutans                    95.51%    failed      0.00%
+ 196  Carduus_tenuiflorus               95.43%    failed      0.03%
+ 197  Carex_acuta                       95.40%    failed      0.00%
+ 198  Carex_acutiformis                 96.58%    failed      0.00%
+ 199  Carex_appropinquata               95.42%    failed      0.00%
+ 200  Carex_aquatilis                   95.41%    failed      0.00%
+ 201  Carex_arenaria                    95.42%    failed      0.00%
+ 202  Carex_atrata                      95.40%    failed      0.00%
+ 203  Carex_atrofusca                   95.40%    failed      0.00%
+ 204  Carex_bigelowii                   95.40%    failed      0.00%
+ 205  Carex_binervis                    95.41%    failed      0.00%
+ 206  Carex_buxbaumii                   95.40%    failed      0.00%
+ 207  Carex_capillaris                  95.40%    failed      0.00%
+ 208  Carex_caryophyllea                95.40%    failed      0.00%
+ 209  Carex_chordorrhiza                95.42%    failed      0.00%
+ 210  Carex_curta                       95.42%    failed      0.00%
+ 211  Carex_davalliana                  95.43%    failed      0.00%
+ 212  Carex_depauperata                 95.43%    failed      0.00%
+ 213  Carex_diandra                     97.45%    failed      3.92%
+ 214  Carex_digitata                    95.42%    failed      0.00%
+ 215  Carex_dioica                      95.49%    failed      0.00%
+ 216  Carex_distans                     95.40%    failed      0.00%
+ 217  Carex_disticha                    95.42%    failed      0.00%
+ 218  Carex_divisa                      97.45%    failed      1.52%
+ 219  Carex_divulsa                     95.42%    failed      0.00%
+ 220  Carex_echinata                    95.42%    failed      0.00%
+ 221  Carex_elata                       96.58%    failed      0.00%
+ 222  Carex_elongata                    95.42%    failed      0.00%
+ 223  Carex_ericetorum                  95.54%    failed      0.00%
+ 224  Carex_extensa                     95.40%    failed      0.00%
+ 225  Carex_filiformis                  98.61%    failed      3.51%
+ 226  Carex_flacca                      95.43%    failed      0.00%
+ 227  Carex_flava                       96.58%    failed      0.00%
+ 228  Carex_hirta                       95.40%    failed      0.00%
+ 229  Carex_hostiana                    95.42%    failed      0.00%
+ 230  Carex_humilis                     96.58%    failed      0.00%
+ 231  Carex_lachenalii                  95.42%    failed      0.00%
+ 232  Carex_laevigata                   96.58%    failed      0.00%
+ 233  Carex_lasiocarpa                  96.58%    failed      0.00%
+ 234  Carex_limosa                      95.40%    failed      0.00%
+ 235  Carex_magellanica                 95.40%    failed      0.00%
+ 236  Carex_maritima                    95.42%    failed      0.00%
+ 237  Carex_microglochin                96.58%    failed      0.00%
+ 238  Carex_montana                     95.39%    failed      0.00%
+ 239  Carex_muricata                    95.42%    failed      0.00%
+ 240  Carex_nigra                       95.40%    failed      0.00%
+ 241  Carex_norvegica                   95.40%    failed      0.00%
+ 242  Carex_ornithopoda                 96.58%    failed      0.00%
+ 243  Carex_otrubae                     95.42%    failed      0.00%
+ 244  Carex_ovalis                      95.51%    failed      0.00%
+ 245  Carex_pallescens                  95.44%    failed      0.00%
+ 246  Carex_panicea                     95.40%    failed      0.00%
+ 247  Carex_paniculata                  95.42%    failed      0.00%
+ 248  Carex_pauciflora                  96.58%    failed      0.00%
+ 249  Carex_pendula                     96.58%    failed      0.00%
+ 250  Carex_pilulifera                  95.41%    failed      0.00%
+ 251  Carex_pseudocyperus               95.40%    failed      0.00%
+ 252  Carex_pulicaris                   96.58%    failed      0.00%
+ 253  Carex_punctata                    95.41%    failed      0.00%
+ 254  Carex_rariflora                   95.40%    failed      0.00%
+ 255  Carex_recta                       95.48%    failed      0.00%
+ 256  Carex_remota                      95.42%    failed      0.00%
+ 257  Carex_riparia                     96.58%    failed      0.00%
+ 258  Carex_rostrata                    95.40%    failed      0.00%
+ 259  Carex_rupestris                   95.42%    failed      0.00%
+ 260  Carex_salina                      95.42%    failed      0.00%
+ 261  Carex_saxatilis                   95.41%    failed      0.00%
+ 262  Carex_spicata                     95.42%    failed      0.00%
+ 263  Carex_strigosa                    96.61%    failed      0.00%
+ 264  Carex_sylvatica                   95.40%    failed      0.00%
+ 265  Carex_vaginata                    95.43%    failed      0.00%
+ 266  Carex_vesicaria                   95.41%    failed      0.00%
+ 267  Carex_viridula                    95.61%    failed      0.00%
+ 268  Carex_vulpina                     95.42%    failed      0.00%
+ 269  Carlina_vulgaris                  95.40%    failed      4.29%
+ 270  Carpinus_betulus                  95.41%    failed      0.02%
+ 271  Carum_carvi                       95.44%    failed      0.04%
+ 272  Carum_verticillatum               95.42%    failed      0.05%
+ 273  Castanea_sativa                   96.58%    failed      0.00%
+ 274  Catabrosa_aquatica                96.58%    failed      0.00%
+ 275  Catapodium_marinum                95.45%    failed      0.09%
+ 276  Catapodium_rigidum                95.45%    failed      0.12%
+ 277  Centaurea_calcitrapa              95.42%    failed      0.00%
+ 278  Centaurea_cyanus                  95.42%    failed      0.00%
+ 279  Centaurea_nigra                   95.44%    failed      0.01%
+ 280  Centaurea_scabiosa                95.42%    failed      0.02%
+ 281  Centaurium_erythraea              95.38%    failed      0.25%
+ 282  Centaurium_littorale              95.44%    failed      0.12%
+ 283  Centaurium_pulchellum             95.38%    failed      0.03%
+ 284  Centaurium_scilloides             95.38%    failed      0.08%
+ 285  Centaurium_tenuiflorum            95.38%    failed      0.07%
+ 286  Cephalanthera_rubra               96.76%    failed      0.00%
+ 287  Cerastium_alpinum                 95.45%    failed      0.00%
+ 288  Cerastium_arcticum                95.45%    failed      0.00%
+ 289  Cerastium_arvense                 95.46%    failed      0.00%
+ 290  Cerastium_cerastoides             95.47%    failed      0.00%
+ 291  Cerastium_diffusum                95.53%    failed      0.00%
+ 292  Cerastium_fontanum                95.45%    failed      0.00%
+ 293  Cerastium_glomeratum              95.43%    failed      0.00%
+ 294  Cerastium_nigrescens              97.47%    passed     18.38%
+ 295  Cerastium_pumilum                 96.60%    failed      0.00%
+ 296  Cerastium_semidecandrum           95.47%    failed      0.00%
+ 297  Ceratocapnos_claviculata          95.42%    passed     19.26%
+ 298  Ceratophyllum_demersum            96.56%    failed      0.00%
+ 299  Ceratophyllum_submersum           96.56%    failed      0.00%
+ 300  Chaenorhinum_minus                95.46%    failed      0.01%
+ 301  Chaerophyllum_temulum             95.41%    failed      0.00%
+ 302  Chamaemelum_nobile                96.60%    failed      0.00%
+ 303  Chamerion_angustifolium           96.59%    failed      0.00%
+ 304  Chelidonium_majus                 95.47%    failed      0.29%
+ 305  Chenopodium_album                 95.42%    failed      0.00%
+ 306  Chenopodium_bonus_henricus        95.43%    failed      0.05%
+ 307  Chenopodium_chenopodioides        95.42%    failed      0.01%
+ 308  Chenopodium_ficifolium            95.42%    failed      0.02%
+ 309  Chenopodium_glaucum               95.42%    failed      0.00%
+ 310  Chenopodium_hybridum              95.41%    failed      0.01%
+ 311  Chenopodium_murale                95.45%    failed      0.01%
+ 312  Chenopodium_polyspermum           95.42%    failed      0.17%
+ 313  Chenopodium_rubrum                95.42%    failed      0.05%
+ 314  Chenopodium_urbicum               95.42%    failed      0.04%
+ 315  Chenopodium_vulvaria              96.59%    failed      0.00%
+ 316  Chrysanthemum_segetum             96.57%    failed      0.00%
+ 317  Chrysosplenium_alternifolium      95.35%    failed      0.00%
+ 318  Chrysosplenium_oppositifolium     95.37%    failed      0.00%
+ 319  Cicendia_filiformis               97.43%    passed      7.74%
+ 320  Cicerbita_alpina                  95.41%    failed      0.01%
+ 321  Cichorium_intybus                 96.57%    failed      0.00%
+ 322  Cicuta_virosa                     95.49%    failed      2.33%
+ 323  Circaea_alpina                    95.43%    failed      0.01%
+ 324  Circaea_lutetiana                 95.41%    failed      0.02%
+ 325  Cirsium_acaule                    95.40%    failed      0.18%
+ 326  Cirsium_arvense                   95.40%    failed      0.03%
+ 327  Cirsium_dissectum                 95.40%    failed      0.10%
+ 328  Cirsium_eriophorum                95.40%    failed      0.09%
+ 329  Cirsium_heterophyllum             95.41%    failed      0.11%
+ 330  Cirsium_palustre                  95.41%    failed      0.09%
+ 331  Cirsium_tuberosum                 95.40%    failed      0.20%
+ 332  Cirsium_vulgare                   95.40%    failed      0.04%
+ 333  Cladium_mariscus                  96.58%    failed      0.00%
+ 334  Clematis_vitalba                  95.43%    failed      0.04%
+ 335  Clinopodium_acinos                95.40%    failed      0.80%
+ 336  Clinopodium_vulgare               96.59%    failed      0.00%
+ 337  Cochlearia_anglica                95.56%    failed      0.00%
+ 338  Cochlearia_danica                 95.57%    failed      0.00%
+ 339  Cochlearia_micacea                95.56%    failed      0.00%
+ 340  Cochlearia_officinalis            95.70%    failed      0.00%
+ 341  Cochlearia_pyrenaica              97.55%    passed     76.97%
+ 342  Coeloglossum_viride               95.38%    failed      0.00%
+ 343  Coincya_monensis                  95.55%    failed      0.00%
+ 344  Coincya_wrightii                  95.55%    failed      0.00%
+ 345  Colchicum_autumnale               96.66%    failed      0.00%
+ 346  Conium_maculatum                  95.42%    failed      0.15%
+ 347  Conopodium_majus                  95.47%    failed      0.00%
+ 348  Convallaria_majalis               96.54%    failed      0.00%
+ 349  Convolvulus_arvensis              95.40%    failed      0.10%
+ 350  Corallorhiza_trifida              97.37%    passed     28.39%
+ 351  Cornus_sanguinea                  96.57%    failed      0.00%
+ 352  Cornus_suecica                    96.56%    failed      0.00%
+ 353  Corrigiola_litoralis              95.51%    failed      0.00%
+ 354  Corylus_avellana                  95.41%    failed      0.05%
+ 355  Corynephorus_canescens            95.45%    failed      0.04%
+ 356  Cotoneaster_cambricus             95.45%    failed      0.31%
+ 357  Crambe_maritima                   95.55%    failed      0.00%
+ 358  Crassula_aquatica                 97.39%    passed     35.26%
+ 359  Crataegus_laevigata               96.57%    failed      0.00%
+ 360  Crataegus_monogyna                96.57%    failed      0.00%
+ 361  Crepis_biennis                    96.57%    failed      0.00%
+ 362  Crepis_capillaris                 95.39%    failed      0.01%
+ 363  Crepis_foetida                    95.39%    failed      0.00%
+ 364  Crepis_mollis                     95.40%    failed      0.01%
+ 365  Crepis_paludosa                   95.39%    failed      0.00%
+ 366  Crepis_praemorsa                  95.57%    failed      0.00%
+ 367  Crithmum_maritimum                96.60%    failed      0.00%
+ 368  Cruciata_laevipes                 96.60%    failed      0.00%
+ 369  Cuscuta_epithymum                 97.50%    passed     36.29%
+ 370  Cuscuta_europaea                  97.50%    passed     45.75%
+ 371  Cynodon_dactylon                  96.58%    failed      0.00%
+ 372  Cynoglossum_germanicum            95.45%    failed      0.00%
+ 373  Cynoglossum_officinale            95.54%    failed      0.00%
+ 374  Cynosurus_cristatus               95.45%    failed      0.02%
+ 375  Cyperus_fuscus                    95.35%    failed      0.00%
+ 376  Cyperus_longus                    96.57%    failed      0.00%
+ 377  Cytisus_scoparius                 95.44%    failed      0.00%
+ 378  Dactylis_glomerata                95.44%    failed      0.02%
+ 379  Dactylorhiza_fuchsii              95.48%    failed      0.00%
+ 380  Dactylorhiza_incarnata            95.37%    failed      0.00%
+ 381  Dactylorhiza_kerryensis           96.58%    failed      0.00%
+ 382  Dactylorhiza_maculata             95.37%    failed      0.00%
+ 383  Dactylorhiza_praetermissa         96.58%    failed      0.00%
+ 384  Dactylorhiza_purpurella           96.58%    failed      0.00%
+ 385  Dactylorhiza_traunsteinerioides   95.61%    failed      0.00%
+ 386  Damasonium_alisma                 98.61%    failed      2.30%
+ 387  Danthonia_decumbens               95.49%    failed      2.37%
+ 388  Daphne_laureola                   95.45%    failed      0.00%
+ 389  Daphne_mezereum                   95.45%    failed      0.00%
+ 390  Daucus_carota                     96.59%    failed      0.00%
+ 391  Deschampsia_cespitosa             96.58%    failed      0.00%
+ 392  Deschampsia_flexuosa              95.44%    failed      0.26%
+ 393  Deschampsia_setacea               95.44%    failed      0.53%
+ 394  Descurainia_sophia                95.54%    failed      0.00%
+ 395  Dianthus_armeria                  95.44%    failed      0.00%
+ 396  Dianthus_deltoides                95.44%    failed      0.00%
+ 397  Dianthus_gratianopolitanus        97.97%    failed      0.00%
+ 398  Diapensia_lapponica               95.54%    failed      0.06%
+ 399  Digitalis_purpurea                95.45%    failed      0.00%
+ 400  Diplotaxis_tenuifolia             95.55%    failed      0.00%
+ 401  Dipsacus_fullonum                 95.44%    passed     21.36%
+ 402  Dipsacus_pilosus                  95.45%    passed     38.44%
+ 403  Draba_aizoides                    95.56%    failed      0.00%
+ 404  Draba_incana                      95.57%    failed      0.00%
+ 405  Draba_muralis                     95.56%    failed      0.00%
+ 406  Draba_norvegica                   95.57%    failed      0.00%
+ 407  Drosera_anglica                   95.47%    failed      0.01%
+ 408  Drosera_intermedia                95.49%    failed      0.01%
+ 409  Drosera_rotundifolia              95.43%    failed      0.01%
+ 410  Dryas_octopetala                  95.44%    failed      0.46%
+ 411  Echium_plantagineum               95.44%    failed      0.00%
+ 412  Echium_vulgare                    96.60%    failed      0.00%
+ 413  Elatine_hexandra                  98.62%    passed     19.95%
+ 414  Elatine_hydropiper                98.62%    passed     20.82%
+ 415  Eleocharis_acicularis             95.39%    failed      0.00%
+ 416  Eleocharis_mamillata              97.73%    passed     18.98%
+ 417  Eleocharis_multicaulis            95.40%    failed      0.00%
+ 418  Eleocharis_palustris              95.45%    failed      0.00%
+ 419  Eleocharis_parvula                98.61%    passed     10.10%
+ 420  Eleocharis_quinqueflora           95.40%    failed      0.00%
+ 421  Eleocharis_uniglumis              95.44%    failed      0.00%
+ 422  Eleogiton_fluitans                95.39%    failed      0.00%
+ 423  Elymus_caninus                    95.50%    failed      3.09%
+ 424  Elytrigia_atherica                95.44%    failed      1.31%
+ 425  Elytrigia_juncea                  96.58%    failed      0.00%
+ 426  Elytrigia_repens                  95.44%    failed      0.96%
+ 427  Empetrum_nigrum                   95.43%    failed      0.00%
+ 428  Epilobium_alsinifolium            95.42%    failed      0.01%
+ 429  Epilobium_anagallidifolium        95.42%    failed      0.00%
+ 430  Epilobium_hirsutum                95.42%    failed      0.01%
+ 431  Epilobium_lanceolatum             95.42%    failed      0.00%
+ 432  Epilobium_montanum                95.42%    failed      0.00%
+ 433  Epilobium_obscurum                95.42%    failed      0.01%
+ 434  Epilobium_palustre                95.42%    failed      0.01%
+ 435  Epilobium_parviflorum             95.42%    failed      0.01%
+ 436  Epilobium_roseum                  95.42%    failed      0.01%
+ 437  Epilobium_tetragonum              95.42%    failed      0.01%
+ 438  Epipactis_atrorubens              95.35%    failed      0.00%
+ 439  Epipactis_dunensis                96.58%    failed      0.00%
+ 440  Epipactis_helleborine             95.35%    failed      0.00%
+ 441  Epipactis_leptochila              95.35%    failed      0.00%
+ 442  Epipactis_palustris               95.35%    failed      0.00%
+ 443  Epipactis_phyllanthes             96.58%    failed      0.00%
+ 444  Erica_ciliaris                    96.60%    failed      0.00%
+ 445  Erica_cinerea                     95.44%    failed      0.00%
+ 446  Erica_tetralix                    95.44%    failed      0.00%
+ 447  Erica_vagans                      96.60%    failed      0.00%
+ 448  Erigeron_acer                     95.47%    failed      0.00%
+ 449  Erigeron_borealis                 95.47%    failed      0.00%
+ 450  Eriocaulon_aquaticum              98.61%    failed      1.93%
+ 451  Eriophorum_angustifolium          95.43%    failed      0.00%
+ 452  Eriophorum_gracile                96.58%    failed      0.00%
+ 453  Eriophorum_latifolium             95.33%    failed      0.01%
+ 454  Eriophorum_vaginatum              95.34%    failed      0.00%
+ 455  Erodium_cicutarium                97.43%    failed      0.04%
+ 456  Erodium_lebelii                   95.49%    passed     41.96%
+ 457  Erodium_maritimum                 97.43%    failed      0.04%
+ 458  Erodium_moschatum                 95.42%    passed     23.63%
+ 459  Erophila_glabrescens              95.63%    failed      0.00%
+ 460  Erophila_majuscula                95.56%    failed      0.00%
+ 461  Erophila_verna                    95.56%    failed      0.00%
+ 462  Eryngium_campestre                95.54%    passed     32.20%
+ 463  Eryngium_maritimum                95.42%    passed     18.82%
+ 464  Erysimum_cheiranthoides           95.55%    failed      0.00%
+ 465  Erysimum_cheiri                   95.55%    failed      0.00%
+ 466  Euonymus_europaeus                96.58%    failed      0.00%
+ 467  Eupatorium_cannabinum             95.43%    failed      0.00%
+ 468  Euphorbia_amygdaloides            95.44%    failed      0.00%
+ 469  Euphorbia_exigua                  95.44%    failed      0.00%
+ 470  Euphorbia_helioscopia             95.48%    failed      0.00%
+ 471  Euphorbia_hyberna                 96.57%    failed      0.00%
+ 472  Euphorbia_lathyris                96.57%    failed      0.00%
+ 473  Euphorbia_paralias                96.55%    failed      0.00%
+ 474  Euphorbia_peplis                  96.58%    failed      0.00%
+ 475  Euphorbia_peplus                  96.57%    failed      0.00%
+ 476  Euphorbia_platyphyllos            96.57%    failed      0.00%
+ 477  Euphorbia_portlandica             95.36%    failed      0.01%
+ 478  Euphorbia_serrulata               95.43%    failed      0.00%
+ 479  Euphrasia_anglica                 95.42%    failed      0.01%
+ 480  Euphrasia_arctica                 95.41%    failed      0.06%
+ 481  Euphrasia_cambrica                95.41%    failed      0.07%
+ 482  Euphrasia_campbelliae             95.43%    failed      0.06%
+ 483  Euphrasia_confusa                 95.42%    failed      0.08%
+ 484  Euphrasia_foulaensis              95.44%    failed      0.05%
+ 485  Euphrasia_frigida                 95.41%    failed      0.06%
+ 486  Euphrasia_heslop_harrisonii       95.41%    failed      0.07%
+ 487  Euphrasia_micrantha               95.41%    failed      0.05%
+ 488  Euphrasia_nemorosa                95.41%    failed      0.10%
+ 489  Euphrasia_officinalis             98.84%    failed      1.35%
+ 490  Euphrasia_ostenfeldii             95.62%    failed      0.03%
+ 491  Euphrasia_pseudokerneri           95.47%    failed      0.04%
+ 492  Euphrasia_rivularis               95.42%    failed      0.02%
+ 493  Euphrasia_rostkoviana             96.58%    failed      0.00%
+ 494  Euphrasia_rotundifolia            95.47%    failed      0.05%
+ 495  Euphrasia_scottica                95.41%    failed      0.02%
+ 496  Euphrasia_tetraquetra             95.47%    failed      0.04%
+ 497  Euphrasia_vigursii                95.42%    failed      0.01%
+ 498  Fagus_sylvatica                   96.58%    failed      0.00%
+ 499  Fallopia_convolvulus              95.67%    failed      0.70%
+ 500  Fallopia_dumetorum                96.60%    failed      0.00%
+ 501  Festuca_altissima                 96.58%    failed      0.00%
+ 502  Festuca_arenaria                  95.44%    failed      0.13%
+ 503  Festuca_arundinacea               95.44%    failed      0.08%
+ 504  Festuca_filiformis                95.44%    failed      0.16%
+ 505  Festuca_gigantea                  95.44%    failed      0.06%
+ 506  Festuca_lemanii                   95.44%    failed      0.19%
+ 507  Festuca_ovina                     95.44%    failed      0.22%
+ 508  Festuca_pratensis                 95.44%    failed      0.08%
+ 509  Festuca_rubra                     95.44%    failed      0.13%
+ 510  Festuca_vivipara                  95.44%    failed      0.19%
+ 511  Filago_gallica                    95.42%    failed      0.00%
+ 512  Filago_lutescens                  95.42%    failed      0.00%
+ 513  Filago_minima                     95.42%    failed      0.00%
+ 514  Filago_pyramidata                 95.43%    failed      0.00%
+ 515  Filago_vulgaris                   96.57%    failed      0.00%
+ 516  Filipendula_ulmaria               96.59%    failed      0.00%
+ 517  Filipendula_vulgaris              95.47%    failed      0.00%
+ 518  Foeniculum_vulgare                95.45%    failed      0.07%
+ 519  Fragaria_vesca                    95.54%    failed      0.20%
+ 520  Frangula_alnus                    95.43%    passed      7.59%
+ 521  Frankenia_laevis                  98.83%    passed     20.63%
+ 522  Fraxinus_excelsior                95.45%    failed      0.19%
+ 523  Fumaria_bastardii                 96.58%    failed      0.00%
+ 524  Fumaria_capreolata                95.39%    passed     40.44%
+ 525  Fumaria_densiflora                96.58%    failed      0.00%
+ 526  Fumaria_muralis                   95.41%    passed     28.97%
+ 527  Fumaria_occidentalis              95.39%    passed     40.77%
+ 528  Fumaria_officinalis               95.40%    passed     39.61%
+ 529  Fumaria_parviflora                95.40%    passed     30.31%
+ 530  Fumaria_purpurea                  95.47%    passed     29.75%
+ 531  Fumaria_vaillantii                95.40%    passed     34.36%
+ 532  Gagea_bohemica                    96.58%    failed      0.00%
+ 533  Gagea_lutea                       97.43%    failed      0.69%
+ 534  Gagea_serotina                    95.41%    failed      0.01%
+ 535  Galeopsis_angustifolia            96.58%    failed      0.00%
+ 536  Galeopsis_bifida                  96.58%    failed      0.00%
+ 537  Galeopsis_segetum                 96.58%    failed      0.00%
+ 538  Galeopsis_speciosa                96.56%    failed      0.00%
+ 539  Galeopsis_tetrahit                96.58%    failed      0.00%
+ 540  Galium_aparine                    96.57%    failed      0.00%
+ 541  Galium_boreale                    96.57%    failed      0.00%
+ 542  Galium_constrictum                98.61%    passed     22.21%
+ 543  Galium_mollugo                    96.57%    failed      0.00%
+ 544  Galium_odoratum                   96.57%    failed      0.00%
+ 545  Galium_palustre                   96.57%    failed      0.00%
+ 546  Galium_parisiense                 96.57%    failed      0.00%
+ 547  Galium_pumilum                    96.57%    failed      0.00%
+ 548  Galium_saxatile                   96.57%    failed      0.00%
+ 549  Galium_sterneri                   96.57%    failed      0.00%
+ 550  Galium_tricornutum                96.57%    failed      0.00%
+ 551  Galium_uliginosum                 96.57%    failed      0.00%
+ 552  Galium_verum                      96.57%    failed      0.00%
+ 553  Gastridium_ventricosum            95.54%    passed      6.96%
+ 554  Gaudinia_fragilis                 95.44%    failed      0.78%
+ 555  Genista_anglica                   95.42%    failed      0.00%
+ 556  Genista_pilosa                    95.42%    failed      0.00%
+ 557  Genista_tinctoria                 95.42%    failed      0.00%
+ 558  Gentiana_nivalis                  95.42%    failed      0.00%
+ 559  Gentiana_pneumonanthe             96.56%    failed      0.00%
+ 560  Gentiana_verna                    96.56%    failed      0.00%
+ 561  Gentianella_amarella              96.56%    failed      0.00%
+ 562  Gentianella_anglica               96.56%    failed      0.00%
+ 563  Gentianella_campestris            95.38%    failed      0.40%
+ 564  Gentianella_germanica             95.38%    failed      0.56%
+ 565  Gentianopsis_ciliata              95.36%    failed      0.20%
+ 566  Geranium_columbinum               97.43%    failed      0.05%
+ 567  Geranium_dissectum                95.51%    passed     12.53%
+ 568  Geranium_lucidum                  95.42%    passed      8.10%
+ 569  Geranium_molle                    95.47%    passed     14.39%
+ 570  Geranium_pratense                 95.38%    failed      2.86%
+ 571  Geranium_purpureum                95.40%    failed      0.27%
+ 572  Geranium_pusillum                 95.44%    failed      3.34%
+ 573  Geranium_robertianum              95.46%    failed      0.20%
+ 574  Geranium_rotundifolium            97.43%    failed      0.03%
+ 575  Geranium_sanguineum               95.38%    passed      6.76%
+ 576  Geranium_sylvaticum               97.43%    failed      0.75%
+ 577  Geum_rivale                       95.49%    failed      0.00%
+ 578  Geum_urbanum                      95.49%    failed      0.00%
+ 579  Glaucium_flavum                   95.44%    passed     17.32%
+ 580  Glaux_maritima                    96.62%    failed      0.00%
+ 581  Glechoma_hederacea                95.58%    failed      0.50%
+ 582  Glyceria_declinata                95.44%    failed      0.39%
+ 583  Glyceria_fluitans                 95.45%    failed      0.27%
+ 584  Glyceria_maxima                   95.45%    failed      0.21%
+ 585  Glyceria_notata                   95.44%    failed      0.26%
+ 586  Gnaphalium_norvegicum             96.57%    failed      0.00%
+ 587  Gnaphalium_supinum                95.42%    failed      0.00%
+ 588  Gnaphalium_sylvaticum             95.42%    failed      0.00%
+ 589  Gnaphalium_uliginosum             95.40%    failed      0.00%
+ 590  Goodyera_repens                   95.35%    failed      0.00%
+ 591  Groenlandia_densa                 95.31%    failed      0.00%
+ 592  Gymnadenia_conopsea               95.39%    failed      0.00%
+ 593  Hammarbya_paludosa                96.58%    failed      0.00%
+ 594  Hedera_helix                      96.60%    failed      0.00%
+ 595  Helianthemum_nummularium          96.72%    failed      0.00%
+ 596  Helianthemum_oelandicum           96.76%    failed      0.00%
+ 597  Helleborus_foetidus               97.51%    passed     89.52%
+ 598  Helleborus_viridis                96.58%    failed      0.00%
+ 599  Heracleum_sphondylium             95.43%    failed      0.02%
+ 600  Herminium_monorchis               98.61%    passed     12.78%
+ 601  Herniaria_ciliolata               95.49%    failed      0.13%
+ 602  Herniaria_glabra                  95.49%    failed      0.16%
+ 603  Hieracium_agg                     96.59%    failed      0.00%
+ 604  Hierochloe_odorata                95.48%    failed      0.06%
+ 605  Hippocrepis_comosa                95.61%    failed      0.00%
+ 606  Hippophae_rhamnoides              98.61%    passed     16.06%
+ 607  Hippuris_vulgaris                 96.57%    failed      0.00%
+ 608  Holcus_lanatus                    95.44%    failed      0.04%
+ 609  Holcus_mollis                     95.44%    failed      0.05%
+ 610  Homogyne_alpina                   95.41%    failed      0.00%
+ 611  Honckenya_peploides               95.42%    failed      0.00%
+ 612  Hordelymus_europaeus              98.61%    passed     15.38%
+ 613  Hordeum_marinum                   96.58%    failed      0.00%
+ 614  Hordeum_murinum                   95.44%    failed      0.21%
+ 615  Hordeum_secalinum                 95.43%    failed      0.70%
+ 616  Hornungia_petraea                 95.57%    failed      0.00%
+ 617  Hottonia_palustris                95.47%    failed      0.01%
+ 618  Humulus_lupulus                   95.40%    failed      0.00%
+ 619  Hyacinthoides_non_scripta         96.60%    failed      0.00%
+ 620  Hydrilla_verticillata             98.61%    passed     20.86%
+ 621  Hydrocharis_morsus_ranae          96.68%    failed      0.00%
+ 622  Hydrocotyle_vulgaris              96.62%    failed      0.00%
+ 623  Hyoscyamus_niger                  96.60%    failed      0.00%
+ 624  Hypericum_androsaemum             97.43%    passed     29.74%
+ 625  Hypericum_elodes                  97.44%    passed     12.16%
+ 626  Hypericum_hirsutum                97.43%    passed     25.48%
+ 627  Hypericum_humifusum               97.43%    passed     27.50%
+ 628  Hypericum_maculatum               97.43%    passed     30.96%
+ 629  Hypericum_montanum                97.43%    passed     31.23%
+ 630  Hypericum_perforatum              97.43%    passed     32.07%
+ 631  Hypericum_pulchrum                97.43%    passed     19.92%
+ 632  Hypericum_tetrapterum             97.43%    passed     31.82%
+ 633  Hypericum_undulatum               97.43%    passed     25.60%
+ 634  Hypochaeris_glabra                95.44%    failed      0.01%
+ 635  Hypochaeris_maculata              95.46%    failed      0.00%
+ 636  Hypochaeris_radicata              95.44%    failed      0.01%
+ 637  Hypopitys_monotropa               97.07%    failed      0.00%
+ 638  Iberis_amara                      95.60%    failed      0.00%
+ 639  Ilex_aquifolium                   95.40%    failed      0.00%
+ 640  Illecebrum_verticillatum          95.44%    failed      0.02%
+ 641  Impatiens_noli_tangere            95.49%    failed      0.00%
+ 642  Inula_conyzae                     95.41%    failed      0.01%
+ 643  Inula_crithmoides                 95.41%    failed      0.00%
+ 644  Inula_helenium                    96.57%    failed      0.00%
+ 645  Iris_foetidissima                 96.52%    failed      0.00%
+ 646  Iris_pseudacorus                  96.50%    failed      0.00%
+ 647  Isatis_tinctoria                  95.61%    failed      0.00%
+ 648  Isolepis_cernua                   95.38%    failed      0.00%
+ 649  Isolepis_setacea                  95.38%    failed      0.00%
+ 650  Jasione_montana                   95.38%    failed      3.69%
+ 651  Juncus_acutiflorus                95.40%    failed      0.00%
+ 652  Juncus_acutus                     95.41%    failed      0.00%
+ 653  Juncus_alpinoarticulatus          97.45%    passed     25.80%
+ 654  Juncus_ambiguus                   95.44%    failed      0.00%
+ 655  Juncus_articulatus                95.40%    failed      0.00%
+ 656  Juncus_balticus                   97.47%    passed      7.92%
+ 657  Juncus_biglumis                   97.46%    passed     15.45%
+ 658  Juncus_bufonius                   95.44%    failed      0.00%
+ 659  Juncus_bulbosus                   95.40%    failed      0.00%
+ 660  Juncus_capitatus                  98.61%    passed      6.96%
+ 661  Juncus_castaneus                  95.42%    failed      0.00%
+ 662  Juncus_compressus                 97.45%    passed     10.41%
+ 663  Juncus_conglomeratus              95.43%    failed      0.00%
+ 664  Juncus_effusus                    95.43%    failed      0.00%
+ 665  Juncus_filiformis                 95.43%    failed      0.00%
+ 666  Juncus_foliosus                   95.44%    failed      0.00%
+ 667  Juncus_gerardii                   95.41%    failed      0.00%
+ 668  Juncus_inflexus                   95.43%    failed      0.00%
+ 669  Juncus_maritimus                  95.42%    failed      0.00%
+ 670  Juncus_pygmaeus                   97.47%    passed     35.86%
+ 671  Juncus_squarrosus                 95.43%    failed      0.00%
+ 672  Juncus_subnodulosus               95.40%    failed      0.00%
+ 673  Juncus_trifidus                   95.42%    failed      0.00%
+ 674  Juncus_triglumis                  95.42%    failed      0.00%
+ 675  Juniperus_communis                96.63%    failed      0.00%
+ 676  Kalmia_procumbens                 95.44%    failed      0.00%
+ 677  Kickxia_elatine                   95.41%    failed      1.41%
+ 678  Kickxia_spuria                    95.41%    failed      1.43%
+ 679  Knautia_arvensis                  95.42%    passed     18.27%
+ 680  Kobresia_simpliciuscula           97.44%    failed      2.32%
+ 681  Koeleria_macrantha                95.44%    failed      0.38%
+ 682  Koeleria_vallesiana               97.47%    failed      2.51%
+ 683  Koenigia_islandica                95.57%    failed      0.04%
+ 684  Lactuca_saligna                   95.40%    failed      0.00%
+ 685  Lactuca_serriola                  95.40%    failed      0.01%
+ 686  Lactuca_virosa                    95.40%    failed      0.01%
+ 687  Lamiastrum_galeobdolon            96.60%    failed      0.00%
+ 688  Lamium_album                      95.39%    passed      9.11%
+ 689  Lamium_amplexicaule               96.57%    failed      0.00%
+ 690  Lamium_confertum                  95.54%    passed      5.18%
+ 691  Lamium_hybridum                   95.38%    passed     10.02%
+ 692  Lamium_purpureum                  95.62%    failed      0.00%
+ 693  Lapsana_communis                  95.40%    failed      0.00%
+ 694  Lathraea_squamaria                95.43%    failed      0.06%
+ 695  Lathyrus_aphaca                   95.45%    failed      0.00%
+ 696  Lathyrus_japonicus                95.45%    failed      0.00%
+ 697  Lathyrus_linifolius               95.45%    failed      0.00%
+ 698  Lathyrus_nissolia                 95.49%    failed      0.00%
+ 699  Lathyrus_palustris                95.45%    failed      0.00%
+ 700  Lathyrus_pratensis                95.45%    failed      0.00%
+ 701  Lathyrus_sylvestris               95.59%    failed      0.00%
+ 702  Legousia_hybrida                  95.30%    failed      0.03%
+ 703  Lemna_gibba                       96.58%    failed      0.00%
+ 704  Lemna_minor                       96.58%    failed      0.00%
+ 705  Lemna_trisulca                    96.58%    failed      0.00%
+ 706  Leontodon_autumnalis              95.40%    failed      0.00%
+ 707  Leontodon_hispidus                95.44%    failed      0.00%
+ 708  Leontodon_saxatilis               95.40%    failed      0.00%
+ 709  Lepidium_campestre                95.57%    failed      0.00%
+ 710  Lepidium_coronopus                95.56%    failed      0.00%
+ 711  Lepidium_heterophyllum            95.56%    failed      0.00%
+ 712  Lepidium_latifolium               95.56%    failed      0.00%
+ 713  Lepidium_ruderale                 95.57%    failed      0.00%
+ 714  Leucanthemum_vulgare              95.45%    failed      0.00%
+ 715  Leucojum_aestivum                 96.54%    failed      0.00%
+ 716  Leymus_arenarius                  96.58%    failed      0.00%
+ 717  Ligusticum_scoticum               95.42%    failed      0.03%
+ 718  Ligustrum_vulgare                 95.44%    failed      0.00%
+ 719  Limonium_binervosum               97.46%    passed     24.66%
+ 720  Limonium_humile                   96.58%    failed      0.00%
+ 721  Limonium_procerum                 96.59%    failed      0.00%
+ 722  Limonium_recurvum                 98.61%    passed     15.02%
+ 723  Limonium_vulgare                  95.37%    failed      0.00%
+ 724  Limosella_aquatica                95.44%    failed      0.00%
+ 725  Limosella_australis               96.60%    failed      0.00%
+ 726  Linaria_repens                    95.44%    failed      0.01%
+ 727  Linaria_vulgaris                  95.44%    failed      0.01%
+ 728  Linnaea_borealis                  96.60%    failed      0.00%
+ 729  Linum_bienne                      95.43%    failed      0.00%
+ 730  Linum_catharticum                 95.44%    failed      0.02%
+ 731  Linum_perenne                     95.42%    failed      0.00%
+ 732  Liparis_loeselii                  96.65%    failed      0.00%
+ 733  Lithospermum_arvense              95.43%    failed      0.00%
+ 734  Lithospermum_officinale           95.44%    failed      0.00%
+ 735  Lithospermum_purpureocaeruleum    95.43%    failed      0.00%
+ 736  Littorella_uniflora               95.50%    failed      0.37%
+ 737  Lobelia_dortmanna                 96.58%    failed      0.00%
+ 738  Lolium_perenne                    95.45%    failed      0.03%
+ 739  Lolium_temulentum                 95.44%    failed      0.05%
+ 740  Lonicera_periclymenum             96.63%    failed      0.00%
+ 741  Lotus_angustissimus               97.47%    passed     33.97%
+ 742  Lotus_corniculatus                95.44%    failed      0.00%
+ 743  Lotus_glaber                      95.44%    failed      0.00%
+ 744  Lotus_pedunculatus                96.58%    failed      0.00%
+ 745  Lotus_subbiflorus                 95.43%    failed      0.00%
+ 746  Luronium_natans                   95.46%    failed      0.00%
+ 747  Luzula_arcuata                    95.40%    failed      0.00%
+ 748  Luzula_campestris                 95.40%    failed      0.00%
+ 749  Luzula_forsteri                   95.40%    failed      0.00%
+ 750  Luzula_multiflora                 95.40%    failed      0.00%
+ 751  Luzula_pallescens                 97.43%    passed     58.21%
+ 752  Luzula_pilosa                     95.39%    failed      0.00%
+ 753  Luzula_spicata                    97.43%    passed     63.67%
+ 754  Luzula_sylvatica                  95.40%    failed      0.00%
+ 755  Lycopus_europaeus                 96.58%    failed      0.00%
+ 756  Lysimachia_nemorum                95.47%    failed      0.00%
+ 757  Lysimachia_nummularia             95.45%    failed      0.00%
+ 758  Lysimachia_thyrsiflora            95.43%    failed      0.00%
+ 759  Lysimachia_vulgaris               95.45%    failed      0.00%
+ 760  Lythrum_hyssopifolia              98.85%    failed      0.01%
+ 761  Lythrum_hyssopifolium             96.59%    failed      0.00%
+ 762  Lythrum_portula                   96.59%    failed      0.00%
+ 763  Lythrum_salicaria                 95.45%    failed      0.00%
+ 764  Maianthemum_bifolium              95.66%    failed      0.02%
+ 765  Malus_sylvestris                  96.63%    failed      0.00%
+ 766  Malva_arborea                     95.43%    failed      0.82%
+ 767  Malva_moschata                    95.43%    failed      0.12%
+ 768  Malva_neglecta                    95.43%    failed      1.39%
+ 769  Malva_sylvestris                  95.43%    failed      1.28%
+ 770  Marrubium_vulgare                 96.57%    failed      0.00%
+ 771  Matricaria_recutita               95.48%    failed      0.00%
+ 772  Matthiola_sinuata                 95.59%    failed      0.00%
+ 773  Meconopsis_cambrica               95.39%    failed      0.12%
+ 774  Medicago_arabica                  95.44%    failed      0.00%
+ 775  Medicago_lupulina                 95.44%    failed      0.00%
+ 776  Medicago_minima                   95.43%    failed      0.00%
+ 777  Medicago_polymorpha               95.44%    failed      0.00%
+ 778  Medicago_sativa                   95.44%    failed      0.00%
+ 779  Melampyrum_cristatum              95.40%    failed      0.60%
+ 780  Melampyrum_pratense               95.42%    failed      1.21%
+ 781  Melampyrum_sylvaticum             96.60%    failed      0.00%
+ 782  Melica_nutans                     95.44%    failed      3.81%
+ 783  Melica_uniflora                   95.44%    failed      1.24%
+ 784  Melilotus_altissimus              95.47%    failed      0.00%
+ 785  Melittis_melissophyllum           95.83%    passed     16.62%
+ 786  Mentha_aquatica                   97.97%    failed      0.00%
+ 787  Mentha_arvensis                   96.60%    failed      0.00%
+ 788  Mentha_pulegium                   95.48%    passed      7.01%
+ 789  Mentha_spicata                    96.58%    failed      0.00%
+ 790  Mentha_suaveolens                 96.58%    failed      0.00%
+ 791  Menyanthes_trifoliata             95.45%    failed      0.04%
+ 792  Mercurialis_annua                 95.42%    failed      0.00%
+ 793  Mercurialis_perennis              95.42%    failed      0.00%
+ 794  Mertensia_maritima                95.51%    failed      0.00%
+ 795  Mespilus_germanica                96.69%    failed      0.00%
+ 796  Meum_athamanticum                 95.50%    passed     10.80%
+ 797  Mibora_minima                     95.45%    failed      0.01%
+ 798  Milium_effusum                    96.58%    failed      0.00%
+ 799  Minuartia_hybrida                 95.42%    failed      0.00%
+ 800  Minuartia_rubella                 95.43%    failed      0.00%
+ 801  Minuartia_sedoides                95.47%    failed      0.00%
+ 802  Minuartia_stricta                 96.58%    failed      0.00%
+ 803  Minuartia_verna                   95.43%    failed      0.00%
+ 804  Misopates_orontium                95.44%    failed      0.82%
+ 805  Moehringia_trinervia              95.42%    failed      0.01%
+ 806  Moenchia_erecta                   95.44%    failed      0.00%
+ 807  Molinia_caerulea                  95.45%    passed     30.27%
+ 808  Moneses_uniflora                  95.46%    failed      0.00%
+ 809  Montia_fontana                    95.45%    failed      0.01%
+ 810  Muscari_neglectum                 98.61%    passed     16.31%
+ 811  Mycelis_muralis                   95.42%    failed      0.00%
+ 812  Myosotis_alpestris                98.61%    passed     25.88%
+ 813  Myosotis_arvensis                 95.52%    failed      0.00%
+ 814  Myosotis_discolor                 96.60%    failed      0.00%
+ 815  Myosotis_laxa                     95.63%    failed      0.00%
+ 816  Myosotis_ramosissima              95.44%    failed      0.00%
+ 817  Myosotis_scorpioides              95.44%    failed      0.00%
+ 818  Myosotis_secunda                  95.53%    failed      0.00%
+ 819  Myosotis_stolonifera              95.44%    failed      0.00%
+ 820  Myosotis_sylvatica                95.54%    failed      0.00%
+ 821  Myosoton_aquaticum                97.46%    passed     10.96%
+ 822  Myosurus_minimus                  97.49%    passed     50.44%
+ 823  Myrica_gale                       96.57%    failed      0.00%
+ 824  Myriophyllum_alterniflorum        95.44%    failed      1.00%
+ 825  Myriophyllum_spicatum             95.44%    failed      0.11%
+ 826  Myriophyllum_verticillatum        95.43%    failed      0.45%
+ 827  Najas_flexilis                    98.61%    passed      6.01%
+ 828  Najas_marina                      96.58%    failed      0.00%
+ 829  Narcissus_pseudonarcissus         98.61%    passed     34.17%
+ 830  Nardus_stricta                    95.46%    failed      0.76%
+ 831  Narthecium_ossifragum             96.58%    failed      0.00%
+ 832  Nasturtium_microphyllum           95.56%    failed      0.00%
+ 833  Nasturtium_officinale             95.56%    failed      0.00%
+ 834  Neottia_cordata                   95.34%    failed      0.00%
+ 835  Neottia_nidus_avis                97.37%    passed     27.61%
+ 836  Neottia_ovata                     95.34%    failed      0.00%
+ 837  Nepeta_cataria                    95.76%    failed      0.02%
+ 838  Nuphar_lutea                      95.45%    failed      1.22%
+ 839  Nuphar_pumila                     95.34%    failed      1.44%
+ 840  Nymphaea_alba                     95.41%    failed      0.11%
+ 841  Nymphoides_peltata                95.37%    failed      0.00%
+ 842  Odontites_vernus                  95.40%    failed      0.28%
+ 843  Oenanthe_aquatica                 95.42%    failed      0.84%
+ 844  Oenanthe_crocata                  96.59%    failed      0.00%
+ 845  Oenanthe_fistulosa                95.42%    failed      0.32%
+ 846  Oenanthe_fluviatilis              96.59%    failed      0.00%
+ 847  Oenanthe_lachenalii               95.42%    failed      0.75%
+ 848  Oenanthe_pimpinelloides           96.59%    failed      0.00%
+ 849  Oenanthe_silaifolia               95.42%    failed      0.32%
+ 850  Onobrychis_viciifolia             95.47%    failed      0.00%
+ 851  Ononis_reclinata                  95.43%    failed      0.00%
+ 852  Ononis_repens                     95.43%    failed      0.00%
+ 853  Ononis_spinosa                    95.43%    failed      0.00%
+ 854  Onopordum_acanthium               95.40%    failed      0.97%
+ 855  Ophrys_apifera                    96.59%    failed      0.00%
+ 856  Ophrys_insectifera                95.39%    failed      0.00%
+ 857  Orchis_mascula                    95.38%    failed      0.00%
+ 858  Orchis_morio                      96.58%    failed      0.00%
+ 859  Origanum_vulgare                  95.39%    failed      0.61%
+ 860  Ornithogalum_pyrenaicum           96.56%    failed      0.00%
+ 861  Ornithopus_perpusillus            95.44%    failed      0.00%
+ 862  Ornithopus_pinnatus               95.44%    failed      0.00%
+ 863  Orobanche_alba                    97.98%    failed      0.00%
+ 864  Orobanche_artemisiae_campestris   97.98%    failed      0.00%
+ 865  Orobanche_caryophyllacea          96.85%    failed      0.00%
+ 866  Orobanche_elatior                 96.82%    failed      0.00%
+ 867  Orobanche_hederae                 96.82%    failed      0.00%
+ 868  Orobanche_minor                   96.81%    failed      0.00%
+ 869  Orobanche_purpurea                98.85%    failed      3.42%
+ 870  Orobanche_rapum_genistae          98.84%    failed      0.77%
+ 871  Orobanche_reticulata              96.82%    failed      0.00%
+ 872  Orthilia_secunda                  95.40%    failed      0.00%
+ 873  Oxalis_acetosella                 95.52%    failed      0.00%
+ 874  Oxyria_digyna                     96.61%    failed      0.00%
+ 875  Oxytropis_campestris              95.45%    failed      0.00%
+ 876  Oxytropis_halleri                 95.45%    failed      0.00%
+ 877  Papaver_argemone                  95.35%    failed      0.07%
+ 878  Papaver_dubium                    95.35%    failed      0.07%
+ 879  Papaver_hybridum                  95.34%    failed      0.02%
+ 880  Papaver_rhoeas                    95.38%    failed      0.10%
+ 881  Papaver_somniferum                95.35%    failed      0.04%
+ 882  Parapholis_incurva                97.48%    passed     28.16%
+ 883  Parapholis_strigosa               96.58%    failed      0.00%
+ 884  Parentucellia_viscosa             95.42%    failed      0.00%
+ 885  Parietaria_judaica                96.53%    failed      0.00%
+ 886  Paris_quadrifolia                 95.41%    failed      0.01%
+ 887  Parnassia_palustris               96.57%    failed      0.00%
+ 888  Pastinaca_sativa                  95.43%    failed      0.06%
+ 889  Pedicularis_palustris             95.39%    failed      0.06%
+ 890  Pedicularis_sylvatica             95.41%    failed      0.13%
+ 891  Persicaria_amphibia               95.44%    passed      7.45%
+ 892  Persicaria_bistorta               95.43%    passed      9.33%
+ 893  Persicaria_hydropiper             95.40%    passed     15.55%
+ 894  Persicaria_lapathifolia           96.61%    failed      0.00%
+ 895  Persicaria_maculosa               95.46%    passed     12.37%
+ 896  Persicaria_minor                  95.40%    passed      7.14%
+ 897  Persicaria_mitis                  95.41%    passed      6.69%
+ 898  Persicaria_vivipara               95.43%    passed      8.75%
+ 899  Petasites_hybridus                95.42%    failed      0.00%
+ 900  Petrorhagia_nanteuilii            95.49%    failed      0.00%
+ 901  Petroselinum_crispum              95.43%    failed      0.06%
+ 902  Petroselinum_segetum              95.43%    passed      5.81%
+ 903  Peucedanum_officinale             95.43%    failed      0.35%
+ 904  Peucedanum_ostruthium             95.43%    failed      0.77%
+ 905  Peucedanum_palustre               95.43%    failed      0.34%
+ 906  Phalaris_arundinacea              95.44%    failed      0.02%
+ 907  Phleum_alpinum                    95.45%    failed      0.40%
+ 908  Phleum_arenarium                  96.58%    failed      0.00%
+ 909  Phleum_bertolonii                 95.45%    failed      0.45%
+ 910  Phleum_phleoides                  96.84%    passed      5.19%
+ 911  Phleum_pratense                   95.45%    failed      0.45%
+ 912  Phragmites_australis              96.58%    failed      0.00%
+ 913  Phyllodoce_caerulea               95.47%    failed      0.00%
+ 914  Physospermum_cornubiense          95.52%    failed      0.72%
+ 915  Phyteuma_orbiculare               95.30%    failed      0.02%
+ 916  Phyteuma_spicatum                 95.30%    failed      0.03%
+ 917  Picris_echioides                  95.41%    failed      0.01%
+ 918  Picris_hieracioides               95.43%    failed      0.01%
+ 919  Pilosella_flagellaris             95.41%    failed      0.03%
+ 920  Pilosella_officinarum             95.41%    failed      0.06%
+ 921  Pilosella_peleteriana             95.42%    failed      0.05%
+ 922  Pimpinella_major                  95.43%    failed      0.78%
+ 923  Pimpinella_saxifraga              95.43%    failed      0.95%
+ 924  Pinguicula_alpina                 97.90%    failed      0.00%
+ 925  Pinguicula_lusitanica             96.50%    failed      0.00%
+ 926  Pinguicula_vulgaris               95.35%    failed      0.99%
+ 927  Pinus_sylvestris                  98.61%    passed     35.38%
+ 928  Plantago_coronopus                95.50%    failed      0.14%
+ 929  Plantago_lanceolata               95.50%    failed      0.07%
+ 930  Plantago_major                    95.52%    failed      0.34%
+ 931  Plantago_maritima                 95.50%    failed      0.36%
+ 932  Plantago_media                    95.53%    failed      0.17%
+ 933  Platanthera_bifolia               95.38%    failed      0.00%
+ 934  Platanthera_chlorantha            95.38%    failed      0.00%
+ 935  Poa_alpina                        95.45%    failed      0.31%
+ 936  Poa_angustifolia                  95.45%    failed      1.00%
+ 937  Poa_annua                         95.45%    failed      0.01%
+ 938  Poa_bulbosa                       97.48%    failed      3.59%
+ 939  Poa_compressa                     95.45%    failed      0.56%
+ 940  Poa_flexuosa                      95.45%    failed      0.61%
+ 941  Poa_glauca                        95.45%    failed      0.45%
+ 942  Poa_humilis                       95.45%    failed      0.96%
+ 943  Poa_infirma                       95.45%    failed      0.00%
+ 944  Poa_nemoralis                     95.45%    failed      0.45%
+ 945  Poa_pratensis                     95.45%    failed      0.88%
+ 946  Poa_trivialis                     95.45%    failed      0.45%
+ 947  Polemonium_caeruleum              95.45%    failed      0.00%
+ 948  Polycarpon_tetraphyllum           95.52%    failed      0.00%
+ 949  Polygala_amarella                 98.61%    passed     65.35%
+ 950  Polygala_serpyllifolia            97.47%    passed      6.09%
+ 951  Polygala_vulgaris                 97.47%    passed      6.09%
+ 952  Polygonatum_multiflorum           96.53%    failed      0.00%
+ 953  Polygonatum_odoratum              96.53%    failed      0.00%
+ 954  Polygonatum_verticillatum         98.61%    passed     15.29%
+ 955  Polygonum_arenastrum              95.64%    passed      9.95%
+ 956  Polygonum_aviculare               95.50%    passed      6.43%
+ 957  Polygonum_boreale                 95.56%    passed      6.47%
+ 958  Polygonum_maritimum               96.60%    failed      0.00%
+ 959  Polygonum_oxyspermum              96.59%    failed      0.00%
+ 960  Polygonum_rurivagum               96.59%    failed      0.00%
+ 961  Polypogon_monspeliensis           95.45%    failed      1.26%
+ 962  Populus_nigra                     95.45%    failed      0.88%
+ 963  Populus_tremula                   95.43%    failed      0.32%
+ 964  Potamogeton_acutifolius           96.58%    failed      0.00%
+ 965  Potamogeton_alpinus               96.58%    failed      0.00%
+ 966  Potamogeton_berchtoldii           95.34%    failed      0.00%
+ 967  Potamogeton_coloratus             95.26%    failed      0.00%
+ 968  Potamogeton_compressus            95.34%    failed      0.00%
+ 969  Potamogeton_crispus               95.34%    failed      0.00%
+ 970  Potamogeton_epihydrus             98.61%    passed      8.63%
+ 971  Potamogeton_filiformis            96.58%    failed      0.00%
+ 972  Potamogeton_friesii               96.58%    failed      0.00%
+ 973  Potamogeton_gramineus             97.37%    passed     96.19%
+ 974  Potamogeton_lucens                96.58%    failed      0.00%
+ 975  Potamogeton_natans                95.34%    failed      0.00%
+ 976  Potamogeton_nodosus               98.62%    passed      7.25%
+ 977  Potamogeton_obtusifolius          95.43%    failed      0.00%
+ 978  Potamogeton_pectinatus            95.38%    failed      0.00%
+ 979  Potamogeton_perfoliatus           96.58%    failed      0.00%
+ 980  Potamogeton_polygonifolius        96.58%    failed      0.00%
+ 981  Potamogeton_praelongus            95.35%    failed      0.00%
+ 982  Potamogeton_pusillus              95.38%    failed      0.00%
+ 983  Potamogeton_rutilus               95.38%    failed      0.00%
+ 984  Potamogeton_trichoides            96.58%    failed      0.00%
+ 985  Potentilla_anglica                95.49%    failed      0.00%
+ 986  Potentilla_anserina               95.49%    failed      0.68%
+ 987  Potentilla_argentea               95.49%    failed      0.03%
+ 988  Potentilla_crantzii               95.64%    failed      0.00%
+ 989  Potentilla_erecta                 95.56%    failed      0.01%
+ 990  Potentilla_fruticosa              96.61%    failed      0.00%
+ 991  Potentilla_neumanniana            95.51%    failed      0.02%
+ 992  Potentilla_palustris              95.57%    failed      0.01%
+ 993  Potentilla_reptans                95.49%    failed      0.00%
+ 994  Potentilla_rupestris              95.48%    failed      0.06%
+ 995  Potentilla_sterilis               95.49%    failed      0.00%
+ 996  Primula_elatior                   98.61%    passed     14.52%
+ 997  Primula_farinosa                  95.43%    failed      0.00%
+ 998  Primula_scotica                   96.58%    failed      0.00%
+ 999  Primula_veris                     95.42%    failed      0.00%
+1000  Primula_vulgaris                  95.42%    failed      0.00%
+1001  Prunella_vulgaris                 96.79%    failed      0.00%
+1002  Prunus_avium                      95.46%    failed      0.11%
+1003  Prunus_cerasus                    96.58%    failed      0.00%
+1004  Prunus_domestica                  95.53%    failed      0.03%
+1005  Prunus_padus                      95.46%    failed      0.05%
+1006  Prunus_spinosa                    95.53%    failed      0.03%
+1007  Pseudorchis_albida                98.68%    passed     27.08%
+1008  Puccinellia_distans               95.44%    failed      0.16%
+1009  Puccinellia_fasciculata           95.44%    failed      0.06%
+1010  Puccinellia_maritima              95.44%    failed      0.14%
+1011  Puccinellia_rupestris             95.45%    failed      0.08%
+1012  Pulicaria_dysenterica             95.41%    failed      0.00%
+1013  Pulicaria_vulgaris                96.57%    failed      0.00%
+1014  Pulmonaria_longifolia             96.58%    failed      0.00%
+1015  Pulmonaria_obscura                95.42%    failed      0.00%
+1016  Pulsatilla_vulgaris               95.43%    failed      0.01%
+1017  Pyrola_media                      95.41%    failed      0.00%
+1018  Pyrola_minor                      95.41%    failed      0.00%
+1019  Pyrola_rotundifolia               95.41%    failed      0.00%
+1020  Pyrus_communis                    96.69%    failed      0.00%
+1021  Pyrus_cordata                     97.48%    failed      1.18%
+1022  Quercus_petraea                   96.58%    failed      0.00%
+1023  Quercus_robur                     96.58%    failed      0.00%
+1024  Radiola_linoides                  96.70%    failed      0.00%
+1025  Ranunculus_acris                  95.46%    failed      0.00%
+1026  Ranunculus_aquatilis              95.45%    failed      0.00%
+1027  Ranunculus_arvensis               97.50%    passed     65.02%
+1028  Ranunculus_auricomus              95.45%    failed      0.00%
+1029  Ranunculus_baudotii               97.49%    passed     44.86%
+1030  Ranunculus_bulbosus               95.46%    failed      0.00%
+1031  Ranunculus_circinatus             97.49%    passed     56.15%
+1032  Ranunculus_ficaria                95.45%    failed      0.00%
+1033  Ranunculus_flammula               95.45%    failed      0.00%
+1034  Ranunculus_fluitans               98.61%    passed     13.01%
+1035  Ranunculus_hederaceus             95.45%    failed      0.00%
+1036  Ranunculus_lingua                 95.46%    failed      0.00%
+1037  Ranunculus_omiophyllus            95.45%    failed      0.00%
+1038  Ranunculus_parviflorus            98.61%    passed     16.72%
+1039  Ranunculus_peltatus               95.45%    failed      0.00%
+1040  Ranunculus_penicillatus           98.62%    passed     11.27%
+1041  Ranunculus_repens                 95.46%    failed      0.00%
+1042  Ranunculus_reptans                98.61%    passed     12.17%
+1043  Ranunculus_sardous                97.60%    passed     71.10%
+1044  Ranunculus_sceleratus             95.45%    failed      0.00%
+1045  Ranunculus_trichophyllus          95.45%    failed      0.00%
+1046  Ranunculus_tripartitus            95.45%    failed      0.00%
+1047  Raphanus_raphanistrum             96.62%    failed      0.00%
+1048  Reseda_lutea                      95.50%    failed      0.00%
+1049  Reseda_luteola                    95.50%    failed      0.00%
+1050  Rhamnus_cathartica                95.45%    passed      5.80%
+1051  Rhinanthus_minor                  95.42%    failed      0.43%
+1052  Rhynchospora_alba                 95.55%    failed      0.00%
+1053  Rhynchospora_fusca                98.61%    failed      4.49%
+1054  Ribes_alpinum                     96.57%    failed      0.00%
+1055  Ribes_rubrum                      95.38%    failed      0.30%
+1056  Ribes_spicatum                    97.43%    passed     38.52%
+1057  Rorippa_amphibia                  96.62%    failed      0.00%
+1058  Rorippa_islandica                 95.55%    failed      0.00%
+1059  Rorippa_palustris                 95.55%    failed      0.00%
+1060  Rorippa_sylvestris                95.56%    failed      0.00%
+1061  Rosa_agrestis                     96.59%    failed      0.00%
+1062  Rosa_arvensis                     95.46%    failed      0.03%
+1063  Rosa_caesia                       96.59%    failed      0.00%
+1064  Rosa_canina                       95.46%    failed      0.03%
+1065  Rosa_micrantha                    95.49%    failed      0.01%
+1066  Rosa_mollis                       96.59%    failed      0.00%
+1067  Rosa_obtusifolia                  95.46%    failed      0.03%
+1068  Rosa_pimpinellifolia              95.46%    failed      0.01%
+1069  Rosa_sherardii                    95.46%    failed      0.03%
+1070  Rosa_stylosa                      96.59%    failed      0.00%
+1071  Rosa_tomentosa                    95.46%    failed      0.02%
+1072  Rubia_peregrina                   96.57%    failed      0.00%
+1073  Rubus_arcticus                    97.49%    passed     37.16%
+1074  Rubus_caesius                     95.50%    failed      0.02%
+1075  Rubus_chamaemorus                 95.49%    failed      0.01%
+1076  Rubus_fruticosus                  95.49%    failed      0.01%
+1077  Rubus_idaeus                      95.49%    failed      0.01%
+1078  Rubus_saxatilis                   95.49%    failed      0.02%
+1079  Rumex_acetosa                     95.40%    passed      8.26%
+1080  Rumex_acetosella                  96.57%    failed      0.00%
+1081  Rumex_alpinus                     95.79%    failed      0.09%
+1082  Rumex_aquaticus                   96.59%    failed      0.00%
+1083  Rumex_conglomeratus               96.59%    failed      0.00%
+1084  Rumex_crispus                     96.59%    failed      0.00%
+1085  Rumex_hydrolapathum               96.59%    failed      0.00%
+1086  Rumex_longifolius                 95.50%    failed      3.89%
+1087  Rumex_maritimus                   96.59%    failed      0.00%
+1088  Rumex_obtusifolius                96.59%    failed      0.00%
+1089  Rumex_palustris                   96.59%    failed      0.00%
+1090  Rumex_pulcher                     96.59%    failed      0.00%
+1091  Rumex_sanguineus                  96.59%    failed      0.00%
+1092  Ruppia_cirrhosa                   98.61%    passed     13.28%
+1093  Ruppia_maritima                   96.67%    failed      0.00%
+1094  Ruscus_aculeatus                  96.66%    failed      0.00%
+1095  Sagina_apetala                    95.43%    failed      0.00%
+1096  Sagina_maritima                   95.43%    failed      0.00%
+1097  Sagina_nivalis                    97.47%    passed     39.63%
+1098  Sagina_nodosa                     95.43%    failed      0.00%
+1099  Sagina_procumbens                 95.43%    failed      0.00%
+1100  Sagina_saginoides                 95.44%    failed      0.00%
+1101  Sagina_subulata                   95.43%    failed      0.00%
+1102  Sagittaria_sagittifolia           96.69%    failed      0.00%
+1103  Salicornia_dolichostachya         95.43%    failed      0.00%
+1104  Salicornia_europaea               96.59%    failed      0.00%
+1105  Salicornia_fragilis               95.53%    failed      0.00%
+1106  Salicornia_nitens                 95.53%    failed      0.00%
+1107  Salicornia_pusilla                95.43%    failed      0.00%
+1108  Salicornia_ramosissima            95.43%    failed      0.00%
+1109  Salix_alba                        95.42%    failed      1.97%
+1110  Salix_arbuscula                   96.55%    failed      0.00%
+1111  Salix_aurita                      95.42%    failed      0.66%
+1112  Salix_caprea                      95.42%    failed      0.78%
+1113  Salix_cinerea                     95.42%    failed      0.67%
+1114  Salix_fragilis                    95.42%    failed      1.59%
+1115  Salix_herbacea                    95.42%    failed      0.66%
+1116  Salix_lanata                      96.55%    failed      0.00%
+1117  Salix_myrsinifolia                96.56%    failed      0.00%
+1118  Salix_myrsinites                  96.55%    failed      0.00%
+1119  Salix_pentandra                   95.42%    failed      1.05%
+1120  Salix_purpurea                    95.42%    failed      0.66%
+1121  Salix_repens                      95.49%    failed      0.26%
+1122  Salix_triandra                    95.42%    failed      0.27%
+1123  Salix_viminalis                   95.42%    failed      0.63%
+1124  Salsola_kali                      95.46%    failed      0.00%
+1125  Salvia_pratensis                  95.45%    failed      2.37%
+1126  Salvia_verbenaca                  96.58%    failed      0.00%
+1127  Sambucus_ebulus                   95.42%    failed      0.46%
+1128  Sambucus_nigra                    96.58%    failed      0.00%
+1129  Samolus_valerandi                 95.44%    failed      0.00%
+1130  Sanguisorba_minor                 96.60%    failed      0.00%
+1131  Sanguisorba_officinalis           95.49%    failed      0.15%
+1132  Sanicula_europaea                 95.44%    passed      7.06%
+1133  Saponaria_officinalis             95.63%    failed      0.00%
+1134  Sarcocornia_perennis              96.73%    failed      0.00%
+1135  Saussurea_alpina                  96.64%    failed      0.00%
+1136  Saxifraga_aizoides                95.37%    failed      0.09%
+1137  Saxifraga_cernua                  95.38%    failed      1.11%
+1138  Saxifraga_cespitosa               95.46%    failed      0.00%
+1139  Saxifraga_granulata               95.38%    failed      0.00%
+1140  Saxifraga_hirculus                95.37%    failed      0.01%
+1141  Saxifraga_hypnoides               95.37%    failed      0.00%
+1142  Saxifraga_nivalis                 95.40%    failed      0.00%
+1143  Saxifraga_oppositifolia           95.37%    failed      0.34%
+1144  Saxifraga_rivularis               95.38%    failed      0.81%
+1145  Saxifraga_rosacea                 95.38%    failed      0.00%
+1146  Saxifraga_spathularis             96.58%    failed      0.00%
+1147  Saxifraga_stellaris               95.39%    failed      0.00%
+1148  Saxifraga_tridactylites           95.39%    failed      0.02%
+1149  Scabiosa_columbaria               95.41%    passed     17.06%
+1150  Scandix_pecten_veneris            95.42%    failed      0.00%
+1151  Scheuchzeria_palustris            95.26%    passed      7.36%
+1152  Schoenoplectus_lacustris          96.58%    failed      0.00%
+1153  Schoenoplectus_tabernaemontani    96.58%    failed      0.00%
+1154  Schoenoplectus_triqueter          96.58%    failed      0.00%
+1155  Schoenus_ferrugineus              95.44%    failed      0.00%
+1156  Schoenus_nigricans                95.42%    failed      0.01%
+1157  Scilla_autumnalis                 96.54%    failed      0.00%
+1158  Scilla_verna                      96.55%    failed      0.00%
+1159  Scirpoides_holoschoenus           95.39%    failed      0.01%
+1160  Scirpus_sylvaticus                95.55%    failed      0.00%
+1161  Scleranthus_annuus                95.43%    failed      0.00%
+1162  Scleranthus_perennis              95.43%    failed      0.00%
+1163  Scorzonera_humilis                96.64%    failed      0.00%
+1164  Scrophularia_auriculata           96.55%    failed      0.00%
+1165  Scrophularia_nodosa               95.56%    failed      0.13%
+1166  Scutellaria_galericulata          96.57%    failed      0.00%
+1167  Scutellaria_minor                 95.43%    failed      1.77%
+1168  Sedum_acre                        97.47%    passed     88.84%
+1169  Sedum_album                       98.61%    failed      3.06%
+1170  Sedum_anglicum                    96.57%    failed      0.00%
+1171  Sedum_forsterianum                96.59%    failed      0.00%
+1172  Sedum_rosea                       95.45%    failed      0.00%
+1173  Sedum_telephium                   96.59%    failed      0.00%
+1174  Sedum_villosum                    95.47%    failed      0.00%
+1175  Selinum_carvifolia                95.43%    failed      0.75%
+1176  Senecio_aquaticus                 95.41%    failed      0.00%
+1177  Senecio_cambrensis                96.57%    failed      0.00%
+1178  Senecio_erucifolius               95.42%    failed      0.00%
+1179  Senecio_jacobaea                  95.41%    failed      0.00%
+1180  Senecio_paludosus                 95.42%    failed      0.00%
+1181  Senecio_sylvaticus                96.57%    failed      0.00%
+1182  Senecio_vulgaris                  95.42%    failed      0.00%
+1183  Serratula_tinctoria               96.57%    failed      0.00%
+1184  Seseli_libanotis                  95.43%    failed      0.86%
+1185  Sesleria_caerulea                 96.71%    failed      0.00%
+1186  Sherardia_arvensis                96.60%    failed      0.00%
+1187  Sibbaldia_procumbens              95.48%    failed      0.10%
+1188  Sibthorpia_europaea               95.44%    failed      0.01%
+1189  Silaum_silaus                     95.43%    failed      0.14%
+1190  Silene_acaulis                    95.44%    failed      0.01%
+1191  Silene_conica                     97.46%    passed     20.73%
+1192  Silene_dioica                     95.43%    failed      0.15%
+1193  Silene_flos_cuculi                95.44%    failed      0.00%
+1194  Silene_gallica                    95.42%    failed      0.01%
+1195  Silene_latifolia                  95.43%    failed      0.08%
+1196  Silene_noctiflora                 95.43%    failed      0.12%
+1197  Silene_nutans                     95.42%    failed      0.00%
+1198  Silene_otites                     97.47%    passed      8.36%
+1199  Silene_suecica                    95.43%    failed      0.03%
+1200  Silene_uniflora                   95.43%    failed      0.01%
+1201  Silene_viscaria                   95.43%    failed      0.02%
+1202  Silene_vulgaris                   95.43%    failed      0.02%
+1203  Silybum_marianum                  97.45%    passed     11.51%
+1204  Sinapis_alba                      95.63%    failed      0.00%
+1205  Sinapis_arvensis                  96.62%    failed      0.00%
+1206  Sison_amomum                      95.37%    failed      2.01%
+1207  Sisymbrium_officinale             95.54%    failed      0.00%
+1208  Sium_latifolium                   95.42%    failed      0.36%
+1209  Smyrnium_olusatrum                95.43%    failed      0.01%
+1210  Solanum_dulcamara                 95.44%    failed      1.14%
+1211  Solanum_nigrum                    95.49%    failed      0.48%
+1212  Solidago_virgaurea                95.45%    failed      0.00%
+1213  Sonchus_arvensis                  95.45%    failed      0.00%
+1214  Sonchus_asper                     95.40%    failed      0.00%
+1215  Sonchus_oleraceus                 95.40%    failed      0.00%
+1216  Sonchus_palustris                 95.40%    failed      0.01%
+1217  Sorbus_admonitor                  96.58%    failed      0.00%
+1218  Sorbus_anglica                    95.45%    failed      0.24%
+1219  Sorbus_aria                       95.45%    failed      0.18%
+1220  Sorbus_arranensis                 96.58%    failed      0.00%
+1221  Sorbus_aucuparia                  95.44%    failed      0.22%
+1222  Sorbus_bristoliensis              95.46%    failed      0.41%
+1223  Sorbus_cambrensis                 96.58%    failed      0.00%
+1224  Sorbus_cheddarensis               95.45%    failed      0.28%
+1225  Sorbus_cuneifolia                 95.47%    failed      0.20%
+1226  Sorbus_devoniensis                96.58%    failed      0.00%
+1227  Sorbus_domestica                  95.45%    failed      0.89%
+1228  Sorbus_eminens                    96.58%    failed      0.00%
+1229  Sorbus_eminentiformis             95.45%    failed      0.26%
+1230  Sorbus_eminentoides               95.51%    failed      0.19%
+1231  Sorbus_hibernica                  95.55%    failed      0.09%
+1232  Sorbus_lancastriensis             95.45%    failed      0.31%
+1233  Sorbus_leighensis                 95.45%    failed      0.28%
+1234  Sorbus_leyana                     95.45%    failed      0.31%
+1235  Sorbus_margaretiae                95.61%    failed      0.08%
+1236  Sorbus_minima                     95.60%    failed      0.09%
+1237  Sorbus_pseudofennica              95.45%    failed      0.30%
+1238  Sorbus_pseudomeinichii            95.45%    failed      0.22%
+1239  Sorbus_rupicola                   95.47%    failed      0.17%
+1240  Sorbus_torminalis                 95.45%    failed      0.33%
+1241  Sorbus_vexans                     95.57%    failed      0.14%
+1242  Sorbus_wilmottiana                95.46%    failed      0.26%
+1243  Sparganium_angustifolium          95.58%    failed      0.03%
+1244  Sparganium_emersum                95.43%    failed      0.15%
+1245  Sparganium_erectum                95.49%    failed      0.00%
+1246  Sparganium_natans                 96.58%    failed      0.00%
+1247  Spartina_anglica                  96.58%    failed      0.00%
+1248  Spartina_maritima                 95.43%    failed      0.00%
+1249  Spergula_arvensis                 95.43%    failed      0.93%
+1250  Spergularia_marina                95.41%    failed      0.19%
+1251  Spergularia_media                 95.41%    failed      0.08%
+1252  Spergularia_rubra                 95.41%    failed      0.16%
+1253  Spergularia_rupicola              95.48%    failed      0.05%
+1254  Spiranthes_romanzoffiana          95.34%    failed      0.00%
+1255  Spiranthes_spiralis               95.34%    failed      0.00%
+1256  Spirodela_polyrhiza               96.62%    failed      0.00%
+1257  Stachys_alpina                    96.57%    failed      0.00%
+1258  Stachys_arvensis                  96.57%    failed      0.00%
+1259  Stachys_germanica                 96.57%    failed      0.00%
+1260  Stachys_officinalis               95.42%    passed     10.72%
+1261  Stachys_palustris                 96.58%    failed      0.00%
+1262  Stachys_sylvatica                 95.40%    passed     19.48%
+1263  Stellaria_graminea                95.45%    failed      0.00%
+1264  Stellaria_holostea                95.46%    failed      0.00%
+1265  Stellaria_media                   95.45%    failed      0.01%
+1266  Stellaria_neglecta                95.45%    failed      0.01%
+1267  Stellaria_nemorum                 97.46%    passed      8.12%
+1268  Stellaria_pallida                 95.46%    failed      0.01%
+1269  Stellaria_palustris               97.47%    passed     24.66%
+1270  Stellaria_uliginosa               95.44%    failed      0.00%
+1271  Stratiotes_aloides                96.61%    failed      0.00%
+1272  Suaeda_maritima                   95.41%    failed      0.00%
+1273  Suaeda_vera                       95.43%    failed      0.00%
+1274  Subularia_aquatica                97.55%    passed     52.62%
+1275  Succisa_pratensis                 96.59%    failed      0.00%
+1276  Symphytum_officinale              96.61%    failed      0.00%
+1277  Symphytum_tuberosum               96.62%    failed      0.00%
+1278  Tamus_communis                    96.57%    failed      0.00%
+1279  Tanacetum_parthenium              96.57%    failed      0.00%
+1280  Tanacetum_vulgare                 96.57%    failed      0.00%
+1281  Taraxacum_agg                     96.57%    failed      0.00%
+1282  Taxus_baccata                     96.63%    failed      0.00%
+1283  Teesdalia_nudicaulis              95.60%    failed      0.00%
+1284  Tephroseris_integrifolia          96.57%    failed      0.00%
+1285  Tephroseris_palustris             95.41%    failed      0.01%
+1286  Teucrium_scordium                 95.47%    failed      0.24%
+1287  Teucrium_scorodonia               95.46%    failed      3.68%
+1288  Thalictrum_alpinum                95.49%    failed      0.05%
+1289  Thalictrum_flavum                 95.47%    failed      0.05%
+1290  Thalictrum_minus                  95.44%    failed      0.14%
+1291  Thesium_humifusum                 95.45%    failed      0.00%
+1292  Thlaspi_arvense                   95.55%    failed      0.00%
+1293  Thlaspi_caerulescens              95.56%    failed      0.00%
+1294  Thlaspi_perfoliatum               95.55%    failed      0.00%
+1295  Thymus_polytrichus                95.38%    failed      1.55%
+1296  Thymus_pulegioides                95.45%    failed      0.79%
+1297  Thymus_serpyllum                  96.60%    failed      0.00%
+1298  Tilia_cordata                     95.40%    failed      0.62%
+1299  Tilia_platyphyllos                95.40%    failed      0.45%
+1300  Tofieldia_pusilla                 95.41%    failed      0.79%
+1301  Torilis_arvensis                  95.44%    failed      0.09%
+1302  Torilis_japonica                  95.43%    failed      0.04%
+1303  Torilis_nodosa                    96.60%    failed      0.00%
+1304  Tragopogon_pratensis              95.40%    failed      0.00%
+1305  Trichophorum_alpinum              96.58%    failed      0.00%
+1306  Trichophorum_cespitosum           95.45%    failed      0.00%
+1307  Trientalis_europaea               95.47%    failed      0.01%
+1308  Trifolium_arvense                 95.43%    failed      0.00%
+1309  Trifolium_bocconei                98.61%    passed     18.59%
+1310  Trifolium_campestre               95.46%    failed      0.00%
+1311  Trifolium_dubium                  95.47%    failed      0.00%
+1312  Trifolium_fragiferum              95.44%    failed      0.00%
+1313  Trifolium_glomeratum              95.42%    failed      0.00%
+1314  Trifolium_medium                  95.44%    failed      0.00%
+1315  Trifolium_micranthum              95.45%    failed      0.00%
+1316  Trifolium_occidentale             95.42%    failed      0.00%
+1317  Trifolium_ochroleucon             95.44%    failed      0.00%
+1318  Trifolium_ornithopodioides        95.52%    failed      0.00%
+1319  Trifolium_pratense                95.44%    failed      0.00%
+1320  Trifolium_repens                  95.43%    failed      0.00%
+1321  Trifolium_scabrum                 95.43%    failed      0.00%
+1322  Trifolium_squamosum               95.51%    failed      0.00%
+1323  Trifolium_striatum                95.46%    failed      0.00%
+1324  Trifolium_strictum                95.47%    failed      0.00%
+1325  Trifolium_subterraneum            95.44%    failed      0.00%
+1326  Trifolium_suffocatum              96.63%    failed      0.00%
+1327  Triglochin_maritima               98.78%    failed      0.02%
+1328  Triglochin_maritimum              96.72%    failed      0.00%
+1329  Triglochin_palustris              95.47%    failed      0.00%
+1330  Trinia_glauca                     95.44%    failed      0.47%
+1331  Tripleurospermum_inodorum         95.49%    failed      0.00%
+1332  Tripleurospermum_maritimum        95.57%    failed      0.00%
+1333  Trisetum_flavescens               95.51%    failed      0.81%
+1334  Trollius_europaeus                95.47%    failed      0.00%
+1335  Tuberaria_guttata                 96.57%    failed      0.00%
+1336  Turritis_glabra                   95.57%    failed      0.00%
+1337  Tussilago_farfara                 95.54%    failed      0.00%
+1338  Typha_angustifolia                96.58%    failed      0.00%
+1339  Typha_latifolia                   96.58%    failed      0.00%
+1340  Ulex_europaeus                    95.59%    failed      0.00%
+1341  Ulex_gallii                       95.48%    failed      0.00%
+1342  Ulex_minor                        95.45%    failed      0.00%
+1343  Ulmus_glabra                      95.45%    failed      0.01%
+1344  Ulmus_minor                       95.45%    failed      0.01%
+1345  Ulmus_plotii                      98.61%    passed      6.94%
+1346  Ulmus_procera                     95.45%    failed      0.02%
+1347  Umbilicus_rupestris               95.44%    failed      0.00%
+1348  Urtica_dioica                     95.36%    failed      0.00%
+1349  Urtica_urens                      95.40%    failed      0.00%
+1350  Utricularia_australis             95.32%    failed      0.01%
+1351  Utricularia_intermedia            95.37%    failed      0.02%
+1352  Utricularia_minor                 95.37%    failed      0.03%
+1353  Utricularia_stygia                96.58%    failed      0.00%
+1354  Utricularia_vulgaris              96.58%    failed      0.00%
+1355  Vaccinium_microcarpum             95.42%    failed      0.08%
+1356  Vaccinium_myrtillus               95.42%    failed      0.00%
+1357  Vaccinium_oxycoccos               95.62%    failed      0.02%
+1358  Vaccinium_uliginosum              95.42%    failed      0.00%
+1359  Vaccinium_vitis_idaea             96.60%    failed      0.00%
+1360  Valeriana_dioica                  96.60%    failed      0.00%
+1361  Valeriana_officinalis             96.60%    failed      0.00%
+1362  Valerianella_carinata             96.58%    failed      0.00%
+1363  Valerianella_dentata              96.58%    failed      0.00%
+1364  Valerianella_eriocarpa            96.58%    failed      0.00%
+1365  Valerianella_locusta              96.58%    failed      0.00%
+1366  Valerianella_rimosa               96.72%    failed      0.00%
+1367  Verbascum_nigrum                  95.41%    failed      1.84%
+1368  Verbascum_thapsus                 95.41%    failed      1.69%
+1369  Verbena_officinalis               95.39%    failed      2.05%
+1370  Veronica_agrestis                 95.44%    failed      0.15%
+1371  Veronica_alpina                   95.43%    failed      0.00%
+1372  Veronica_anagallis_aquatica       95.43%    failed      0.01%
+1373  Veronica_arvensis                 95.42%    failed      0.27%
+1374  Veronica_beccabunga               95.43%    failed      0.00%
+1375  Veronica_catenata                 95.43%    failed      0.01%
+1376  Veronica_chamaedrys               95.43%    failed      1.20%
+1377  Veronica_fruticans                95.45%    failed      0.06%
+1378  Veronica_hederifolia              95.44%    failed      0.21%
+1379  Veronica_montana                  95.45%    failed      0.00%
+1380  Veronica_officinalis              95.45%    failed      0.01%
+1381  Veronica_scutellata               95.45%    failed      0.00%
+1382  Veronica_serpyllifolia            95.43%    failed      0.01%
+1383  Veronica_spicata                  95.43%    failed      0.02%
+1384  Veronica_verna                    98.61%    passed     29.11%
+1385  Viburnum_lantana                  95.43%    failed      0.38%
+1386  Viburnum_opulus                   95.42%    failed      0.83%
+1387  Vicia_bithynica                   95.48%    failed      0.00%
+1388  Vicia_cracca                      95.49%    failed      0.00%
+1389  Vicia_hirsuta                     95.45%    failed      0.00%
+1390  Vicia_lathyroides                 95.48%    failed      0.00%
+1391  Vicia_lutea                       95.48%    failed      0.00%
+1392  Vicia_orobus                      95.48%    failed      0.00%
+1393  Vicia_parviflora                  95.47%    failed      0.00%
+1394  Vicia_sativa                      95.48%    failed      0.00%
+1395  Vicia_sepium                      95.48%    failed      0.00%
+1396  Vicia_sylvatica                   95.45%    failed      0.00%
+1397  Vicia_tetrasperma                 95.45%    failed      0.00%
+1398  Vinca_minor                       96.57%    failed      0.00%
+1399  Viola_arvensis                    95.46%    failed      0.00%
+1400  Viola_canina                      95.46%    failed      0.08%
+1401  Viola_hirta                       95.46%    failed      0.10%
+1402  Viola_kitaibeliana                98.88%    failed      0.00%
+1403  Viola_lactea                      95.46%    failed      0.10%
+1404  Viola_lutea                       95.46%    failed      0.00%
+1405  Viola_odorata                     95.46%    failed      0.18%
+1406  Viola_palustris                   95.45%    failed      0.01%
+1407  Viola_persicifolia                97.50%    passed      6.16%
+1408  Viola_reichenbachiana             95.46%    failed      0.13%
+1409  Viola_riviniana                   95.46%    failed      0.12%
+1410  Viola_rupestris                   97.50%    passed      7.41%
+1411  Viola_tricolor                    95.46%    failed      0.00%
+1412  Viscum_album                      95.39%    failed      0.00%
+1413  Vulpia_bromoides                  95.44%    failed      0.03%
+1414  Vulpia_ciliata                    96.58%    failed      0.00%
+1415  Vulpia_fasciculata                95.45%    failed      0.06%
+1416  Vulpia_myuros                     95.44%    failed      0.19%
+1417  Wahlenbergia_hederacea            95.30%    failed      0.67%
+1418  Wolffia_arrhiza                   98.61%    failed      4.22%
+1419  Zannichellia_palustris            96.65%    failed      0.00%
+1420  Zostera_marina                    96.69%    failed      0.00%
+1421  Zostera_noltei                    96.68%    failed      0.00%
+WARNING: 1421 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                             95.92%  1279 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: No CharPartition defined, use all CharSets
+
+Loading 3 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		1353	37462	4036	30380	TESTNEWMERGE	part1
+2		1412	954	801	111	TESTNEWMERGE	part2
+3		1400	539	257	105	TESTNEWMERGE	part3
+Degree of missing data: 0.046
+Info: multi-threading strategy over partitions
+
+Reading constraint tree constraint_tree3.newick...
+WARNING: Rooted constraint tree will be treated as unrooted tree
+INFO: Constraint tree will be applied to ML tree and all bootstrap trees.
+NOTE: Agrimonia_procera is identical to Agrimonia_eupatoria but kept for subsequent analysis
+NOTE: Agrostis_vinealis is identical to Agrostis_canina but kept for subsequent analysis
+NOTE: Asparagus_prostratus is identical to Asparagus_officinalis but kept for subsequent analysis
+NOTE: Atriplex_patula is identical to Atriplex_longipes but kept for subsequent analysis
+NOTE: Cochlearia_micacea is identical to Cochlearia_anglica but kept for subsequent analysis
+NOTE: Crataegus_monogyna is identical to Crataegus_laevigata but kept for subsequent analysis
+NOTE: Dactylorhiza_purpurella is identical to Dactylorhiza_praetermissa but kept for subsequent analysis
+NOTE: Euphrasia_vigursii is identical to Euphrasia_anglica but kept for subsequent analysis
+NOTE: Festuca_rubra is identical to Festuca_arenaria but kept for subsequent analysis
+NOTE: Festuca_vivipara is identical to Festuca_lemanii but kept for subsequent analysis
+NOTE: Fumaria_densiflora is identical to Fumaria_bastardii but kept for subsequent analysis
+NOTE: Gentianella_anglica is identical to Gentianella_amarella but kept for subsequent analysis
+NOTE: Nasturtium_officinale is identical to Nasturtium_microphyllum but kept for subsequent analysis
+NOTE: Ononis_spinosa is identical to Ononis_repens but kept for subsequent analysis
+NOTE: Orobanche_hederae is identical to Orobanche_elatior but kept for subsequent analysis
+NOTE: Platanthera_chlorantha is identical to Platanthera_bifolia but kept for subsequent analysis
+NOTE: Poa_nemoralis is identical to Poa_glauca but kept for subsequent analysis
+NOTE: Potentilla_reptans is identical to Potentilla_anglica but kept for subsequent analysis
+NOTE: Quercus_robur is identical to Quercus_petraea but kept for subsequent analysis
+NOTE: Rosa_mollis is identical to Rosa_agrestis but kept for subsequent analysis
+NOTE: Rosa_obtusifolia is identical to Rosa_arvensis but kept for subsequent analysis
+NOTE: Rosa_stylosa is identical to Rosa_caesia but kept for subsequent analysis
+NOTE: Rumex_crispus is identical to Rumex_aquaticus but kept for subsequent analysis
+NOTE: Rumex_obtusifolius is identical to Rumex_conglomeratus but kept for subsequent analysis
+NOTE: Rumex_palustris is identical to Rumex_maritimus but kept for subsequent analysis
+NOTE: Salicornia_ramosissima is identical to Salicornia_pusilla but kept for subsequent analysis
+NOTE: Salix_purpurea is identical to Salix_herbacea but kept for subsequent analysis
+NOTE: Salix_myrsinites is identical to Salix_lanata but kept for subsequent analysis
+NOTE: Schoenoplectus_triqueter is identical to Schoenoplectus_tabernaemontani but kept for subsequent analysis
+NOTE: Sonchus_oleraceus is identical to Sonchus_asper but kept for subsequent analysis
+NOTE: Sorbus_devoniensis is identical to Sorbus_admonitor but kept for subsequent analysis
+NOTE: Sorbus_leighensis is identical to Sorbus_cheddarensis but kept for subsequent analysis
+NOTE: Typha_latifolia is identical to Typha_angustifolia but kept for subsequent analysis
+NOTE: Ulmus_minor is identical to Ulmus_glabra but kept for subsequent analysis
+NOTE: Valerianella_locusta is identical to Valerianella_carinata but kept for subsequent analysis
+NOTE: Valerianella_eriocarpa is identical to Valerianella_dentata but kept for subsequent analysis
+NOTE: Veronica_catenata is identical to Veronica_anagallis_aquatica but kept for subsequent analysis
+
+NOTE: Restoring information from model checkpoint file ITS_correct.model.gz
+
+CHECKPOINT: Initial tree restored
+NOTE: ModelFinder requires 3500 MB RAM!
+Testing GTR+F+G on supermatrix...
+GTR+F+G4 / LnL: -281127.118 / df: 2848 / AIC: 567950.236 / AICc: 568399.688 / BIC: 592358.059
+Selecting individual models for 3 charsets using BIC...
+ No. Model        Score       Charset
+   1 GTR+F+I+G4   257193.102  part1
+   2 TVM+F+R8     227924.032  part2
+   3 HKY+F+R10    69075.388   part3
+Full partition model BIC score: 584371.132 (LnL: -276890.541  df:2894)
+Merging models to increase model fit (about 7 total partition schemes)...
+   4 SYM+R10      589259.680  part1+part2
+   5 SYM+I+G4     586166.146  part1+part3
+   6 GTR+F+R10    585116.648  part2+part3
+BEST-FIT PARTITION MODEL: 
+  charpartition BIC = GTR+F+I+G4: part1, TVM+F+R8: part2, HKY+F+R10: part3;
+Agglomerative model selection: (part1,part2,part3)
+Partition information was printed to ITS_correct.best_scheme.nex
+Partition information in Raxml format was printed to ITS_correct.best_scheme
+
+All model information printed to ITS_correct.model.gz
+CPU time for ModelFinder: 999047.799 seconds (277h:30m:47s)
+Wall-clock time for ModelFinder: 1001237.582 seconds (278h:7m:17s)
+Generating 1000 samples for ultrafast bootstrap (seed: 472838)...
+
+NOTE: 1674 MB RAM (1 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -286782.532
+Current log-likelihood at step 1: -278508.026
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -278027.312
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -278008.214
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -277994.968
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -277984.512
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -277976.093
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -277969.281
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 8: -277963.719
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 9: -277953.628
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 10: -277930.248
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 11: -277911.760
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 12: -277895.660
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 13: -277874.478
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 14: -277854.087
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 15: -277838.439
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 16: -277824.788
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 17: -277806.199
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 18: -277787.150
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 19: -277773.717
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 20: -277762.068
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 21: -277745.751
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 22: -277207.845
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 23: -277201.407
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 24: -277194.977
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 25: -277189.167
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 26: -277183.860
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 27: -277178.928
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 28: -277174.435
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 29: -277170.257
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 30: -277166.401
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 31: -277162.841
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 32: -277159.544
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 33: -277156.406
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 34: -277153.629
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 35: -277141.558
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 36: -277126.806
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 37: -277123.490
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 38: -277122.284
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 39: -277121.564
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 40: -277121.025
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 41: -277120.613
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 42: -277120.261
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 43: -277119.971
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 44: -277119.713
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 45: -277119.486
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 46: -277119.285
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 47: -277119.102
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 48: -277118.937
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 49: -277118.789
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 50: -277118.662
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 51: -277118.538
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 52: -277118.435
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 53: -277118.339
+Partition-specific rates:  1.028 0.367 0.150
+Parameters optimization took 52 rounds (10067.947 sec)
+
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 285.567 second
+Computing log-likelihood of 99 initial trees ... 3821.850 seconds
+Current best score: -277118.339
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276425.892
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276422.422
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276421.630
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276420.937
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276420.325
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276419.775
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276419.284
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276418.839
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 8: -276418.437
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 9: -276418.072
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 10: -276417.744
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 11: -276417.447
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 12: -276417.177
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 13: -276416.934
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 14: -276416.721
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 15: -276416.514
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 16: -276416.338
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 17: -276416.174
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 18: -276416.023
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 19: -276415.886
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 20: -276415.759
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 21: -276415.644
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 22: -276415.538
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 23: -276415.441
+Parameters optimization took 22 rounds (3099.191 sec)
+
+BETTER TREE FOUND at iteration 1: -276415.441
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276390.814
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276384.901
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276379.872
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276375.223
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276370.914
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276366.926
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276363.209
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276359.735
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 8: -276356.440
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 9: -276353.388
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 10: -276350.526
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 11: -276347.778
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 12: -276345.246
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 13: -276342.880
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 14: -276340.648
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 15: -276338.599
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 16: -276336.662
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 17: -276334.730
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 18: -276332.821
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 19: -276330.965
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 20: -276329.127
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 21: -276327.316
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 22: -276325.534
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 23: -276323.748
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 24: -276322.015
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 25: -276320.314
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 26: -276318.645
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 27: -276317.003
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 28: -276315.400
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 29: -276313.826
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 30: -276312.290
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 31: -276310.785
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 32: -276309.321
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 33: -276307.884
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 34: -276306.492
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 35: -276305.139
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 36: -276303.822
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 37: -276302.546
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 38: -276301.306
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 39: -276300.109
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 40: -276298.948
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 41: -276297.828
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 42: -276296.745
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 43: -276295.704
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 44: -276294.699
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 45: -276293.734
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 46: -276292.806
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 47: -276291.918
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 48: -276291.064
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 49: -276290.249
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 50: -276289.467
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 51: -276288.723
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 52: -276288.012
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 53: -276287.336
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 54: -276286.691
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 55: -276286.080
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 56: -276285.498
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 57: -276284.949
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 58: -276284.426
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 59: -276283.934
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 60: -276283.467
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 61: -276283.028
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 62: -276282.613
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 63: -276282.224
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 64: -276281.857
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 65: -276281.513
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 66: -276281.189
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 67: -276280.887
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 68: -276280.602
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 69: -276280.338
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 70: -276280.089
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 71: -276279.859
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 72: -276279.642
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 73: -276279.442
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 74: -276279.255
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 75: -276279.082
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 76: -276278.921
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 77: -276278.772
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 78: -276278.633
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 79: -276278.505
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 80: -276278.386
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 81: -276278.276
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 82: -276278.174
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 83: -276278.081
+Parameters optimization took 82 rounds (9452.422 sec)
+
+BETTER TREE FOUND at iteration 4: -276278.081
+Iteration 10 / LogL: -276529.986 / Time: 10h:37m:1s
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276265.781
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276252.679
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276248.529
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276245.666
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276243.264
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276241.223
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276239.458
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276237.965
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 8: -276236.570
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 9: -276235.464
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 10: -276234.609
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 11: -276234.054
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 12: -276233.698
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 13: -276233.487
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 14: -276233.287
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 15: -276233.105
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 16: -276232.933
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 17: -276232.775
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 18: -276232.625
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 19: -276232.488
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 20: -276232.357
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 21: -276232.238
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 22: -276232.122
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 23: -276232.019
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 24: -276231.927
+Parameters optimization took 23 rounds (3318.758 sec)
+
+BETTER TREE FOUND at iteration 17: -276231.927
+Iteration 20 / LogL: -276447.343 / Time: 15h:15m:14s
+Finish initializing candidate tree set (20)
+Current best tree score: -276231.927 / CPU time: 44829.316
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276205.379
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276194.557
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276191.791
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276190.025
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276189.042
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276188.297
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276187.701
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276187.216
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 8: -276186.817
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 9: -276186.490
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 10: -276186.220
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 11: -276186.000
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 12: -276185.818
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 13: -276185.669
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 14: -276185.545
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 15: -276185.443
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 16: -276185.356
+Parameters optimization took 15 rounds (2524.658 sec)
+
+BETTER TREE FOUND at iteration 24: -276185.356
+Iteration 30 / LogL: -276205.669 / Time: 17h:26m:43s (56h:32m:48s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276183.580
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276180.072
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276177.849
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276175.654
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276173.762
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276172.149
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276170.788
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276169.687
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 8: -276168.832
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 9: -276168.192
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 10: -276167.753
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 11: -276167.344
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 12: -276166.952
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 13: -276166.592
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 14: -276166.246
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 15: -276165.927
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 16: -276165.629
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 17: -276165.350
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 18: -276165.087
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 19: -276164.844
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 20: -276164.613
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 21: -276164.400
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 22: -276164.199
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 23: -276164.007
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 24: -276163.834
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 25: -276163.674
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 26: -276163.524
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 27: -276163.386
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 28: -276163.257
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 29: -276163.137
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 30: -276163.027
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 31: -276162.925
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 32: -276162.829
+Parameters optimization took 31 rounds (3690.598 sec)
+
+BETTER TREE FOUND at iteration 38: -276162.829
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276157.591
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276153.118
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276152.236
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276151.833
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276151.554
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276151.342
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276151.171
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276151.033
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 8: -276150.921
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 9: -276150.829
+Parameters optimization took 8 rounds (1457.734 sec)
+
+BETTER TREE FOUND at iteration 39: -276150.829
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276150.721
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276149.821
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276149.541
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276149.336
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276149.175
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276149.045
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276148.940
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276148.853
+Parameters optimization took 6 rounds (1096.163 sec)
+
+BETTER TREE FOUND at iteration 40: -276148.853
+Iteration 40 / LogL: -276148.853 / Time: 21h:3m:59s (54h:1m:1s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276130.206
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276128.075
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276126.267
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276124.767
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276123.533
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276122.574
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276121.840
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276121.347
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 8: -276121.043
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 9: -276120.756
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 10: -276120.485
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 11: -276120.230
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 12: -276119.990
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 13: -276119.773
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 14: -276119.569
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 15: -276119.372
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 16: -276119.195
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 17: -276119.034
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 18: -276118.882
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 19: -276118.742
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 20: -276118.612
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 21: -276118.492
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 22: -276118.380
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 23: -276118.277
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 24: -276118.181
+Parameters optimization took 23 rounds (2632.363 sec)
+
+BETTER TREE FOUND at iteration 47: -276118.181
+Iteration 50 / LogL: -276156.936 / Time: 23h:16m:57s (46h:5m:24s left)
+Log-likelihood cutoff on original alignment: -276260.651
+Iteration 60 / LogL: -276162.224 / Time: 24h:45m:34s (36h:30m:35s left)
+Iteration 70 / LogL: -276151.027 / Time: 26h:12m:51s (29h:15m:12s left)
+Iteration 80 / LogL: -276164.373 / Time: 27h:37m:53s (23h:26m:3s left)
+Iteration 90 / LogL: -276284.083 / Time: 28h:50m:40s (18h:28m:24s left)
+Iteration 100 / LogL: -276227.045 / Time: 30h:24m:33s (14h:26m:12s left)
+Log-likelihood cutoff on original alignment: -276216.837
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.983
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -276124.568 / Time: 31h:57m:9s (26h:22m:58s left)
+Iteration 120 / LogL: -276145.777 / Time: 33h:23m:13s (22h:26m:42s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276113.936
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276111.175
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276110.138
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276109.435
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276109.028
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276108.867
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276108.766
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276108.674
+Parameters optimization took 6 rounds (1327.106 sec)
+
+BETTER TREE FOUND at iteration 126: -276108.674
+Iteration 130 / LogL: -276137.237 / Time: 35h:9m:40s (26h:9m:59s left)
+Iteration 140 / LogL: -276119.984 / Time: 36h:31m:25s (22h:35m:50s left)
+Iteration 150 / LogL: -276136.012 / Time: 37h:56m:31s (19h:21m:10s left)
+Log-likelihood cutoff on original alignment: -276202.862
+Iteration 160 / LogL: -276115.054 / Time: 39h:21m:23s (16h:20m:12s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276107.981
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276105.667
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276104.882
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276104.421
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276104.235
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276104.148
+Parameters optimization took 4 rounds (1063.963 sec)
+
+BETTER TREE FOUND at iteration 166: -276104.148
+Iteration 170 / LogL: -276161.742 / Time: 40h:58m:18s (23h:16m:25s left)
+Iteration 180 / LogL: -276130.720 / Time: 42h:29m:13s (20h:24m:45s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -276102.256
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276100.295
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276099.719
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276099.449
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276099.344
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276099.265
+Parameters optimization took 4 rounds (967.371 sec)
+
+BETTER TREE FOUND at iteration 190: -276099.265
+Iteration 190 / LogL: -276099.265 / Time: 44h:20m:51s (23h:27m:51s left)
+Iteration 200 / LogL: -276217.289 / Time: 45h:59m:39s (20h:48m:5s left)
+Log-likelihood cutoff on original alignment: -276188.935
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.990
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -276180.278 / Time: 47h:36m:26s (20h:30m:2s left)
+Iteration 220 / LogL: -276130.140 / Time: 49h:17m:35s (18h:0m:23s left)
+Iteration 230 / LogL: -276120.694 / Time: 50h:40m:14s (15h:29m:19s left)
+Iteration 240 / LogL: -276123.183 / Time: 52h:7m:43s (13h:5m:12s left)
+Iteration 250 / LogL: -276102.565 / Time: 53h:33m:14s (10h:45m:13s left)
+Log-likelihood cutoff on original alignment: -276188.935
+Iteration 260 / LogL: -276210.227 / Time: 54h:55m:57s (8h:29m:1s left)
+Iteration 270 / LogL: -276125.568 / Time: 56h:10m:23s (6h:15m:52s left)
+Iteration 280 / LogL: -276144.116 / Time: 57h:26m:30s (4h:7m:3s left)
+Iteration 290 / LogL: -276202.833 / Time: 58h:54m:3s (2h:2m:17s left)
+Iteration 300 / LogL: -276128.467 / Time: 60h:9m:22s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -276188.935
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.991
+TREE SEARCH COMPLETED AFTER 300 ITERATIONS / Time: 60h:9m:45s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -276099.265
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -276099.201
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -276099.129
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 3: -276099.067
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 4: -276099.016
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 5: -276098.972
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 6: -276098.931
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 7: -276098.893
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 8: -276098.859
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 9: -276098.829
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 10: -276098.798
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 11: -276098.773
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 12: -276098.746
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 13: -276098.725
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 14: -276098.705
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 15: -276098.687
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 16: -276098.670
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 17: -276098.656
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 18: -276098.641
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 19: -276098.630
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 20: -276098.615
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 21: -276098.606
+Partition-specific rates:  1.030 0.307 0.116
+Parameters optimization took 20 rounds (2289.622 sec)
+
+Partition information was printed to ITS_correct.best_model.nex
+BEST SCORE FOUND : -276098.606
+Creating bootstrap support values...
+Split supports printed to NEXUS file ITS_correct.splits.nex
+Total tree length: 115.983
+
+Total number of iterations: 300
+CPU time used for tree search: 206359.276 sec (57h:19m:19s)
+Wall-clock time used for tree search: 206498.041 sec (57h:21m:38s)
+Total CPU time used: 218769.584 sec (60h:46m:9s)
+Total wall-clock time used: 218917.515 sec (60h:48m:37s)
+
+Computing bootstrap consensus tree...
+Reading input file ITS_correct.splits.nex...
+1421 taxa and 4487 splits.
+Consensus tree written to ITS_correct.contree
+Reading input trees file ITS_correct.contree
+Log-likelihood of consensus tree: -276101.675
+
+Analysis results written to: 
+  IQ-TREE report:                ITS_correct.iqtree
+  Maximum-likelihood tree:       ITS_correct.treefile
+  Best partitioning scheme:      ITS_correct.best_scheme.nex
+           in RAxML format:      ITS_correct.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          ITS_correct.splits.nex
+  Consensus tree:                ITS_correct.contree
+  Screen log file:               ITS_correct.log
+
+Date and Time: Fri May 10 17:23:47 2019
