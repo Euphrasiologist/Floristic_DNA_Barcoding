@@ -11,3 +11,9 @@
 <sup>4</sup>57, Aberdulais Road, Cardiff, UK (?).
 
 <sup>5</sup>Author for correspondence (email: max.brown@ed.ac.uk)
+
+### Notes
+
+This repository contains all the code and data neccesary to reproduce analyses in the manuscript "The genetic landscape of hybridisation in the British Flora"
+
+Work in progress but nearly complete.
