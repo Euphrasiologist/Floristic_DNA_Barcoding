@@ -15,21 +15,21 @@ library(Taxonstand)
 # need to make names correct.
 # in making the names correct, we lose some data, but we still have more than
 # enough to actually answer the questions we want.
-stace4 <- fread("../data/Trait_databases/DTOL_updated_list_070220.csv")
+stace4 <- fread("./data/Trait_databases/DTOL_updated_list_070220.csv")
 # make the double barrels separate by a dash
 stace4[, Stace_4_Species := gsub("^([[:alnum:]]* [[:alnum:]]*) ", "\\1-", Stace_4_Species)]
 stace4[, Plantlist := gsub("^([[:alnum:]]* [[:alnum:]]*) ", "\\1-", Plantlist)]
 stace4[, `taxon name` := gsub("^([[:alnum:]]* [[:alnum:]]*) ", "\\1-", `taxon name`)]
 
 #### CPDNA SEQUENCES ####
-sequ <- read.alignment("../data/Alignment_fastas/final_merged_for_pairwise_dist.fasta", format = "fasta")
+sequ <- read.alignment("./data/Alignment_fastas/final_merged_for_pairwise_dist.fasta", format = "fasta")
 # get sequence names and remove underscore
 sequ_names <- as.data.table(sequ[[2]])
 sequ_names[, Species := gsub("_", " ", V1)][, V1 := NULL]
 # hit against the plant list
 #sequ_names2 <- Taxonstand::TPL(sequ_names$Species, silent = FALSE)
 #save(sequ_names2, file = "../data/Backups/sequ_names2.RData")
-load("../data/Backups/sequ_names2.RData")
+load("./data/Backups/sequ_names2.RData")
 sequ_names[, Plantlist := paste(sequ_names2$New.Genus, sequ_names2$New.Species, sep = " ")]
 # deal with double barrel names
 sequ_names[, Plantlist := gsub("^([[:alnum:]]* [[:alnum:]]*) ", "\\1-", Plantlist)]
@@ -54,7 +54,7 @@ sequ[[3]] <- sequ[[3]][sequ_names5$ID]
 dist.sequ <- dist.alignment(sequ)
 
 #### ITS SEQUENCES ####
-sequ2 <- read.alignment("../data/Alignment_fastas/final_merged_ITS_extraction.fasta", format = "fasta")
+sequ2 <- read.alignment("./data/Alignment_fastas/final_merged_ITS_extraction.fasta", format = "fasta")
 
 sequ_names.2 <- as.data.table(sequ2[[2]])
 sequ_names.2[, Species := gsub("_", " ", V1)][, V1 := NULL]
@@ -104,7 +104,7 @@ dist.sequ.cp2$variable <- gsub(pattern = "_", replacement = " ", x = dist.sequ.c
 nchar(dist.sequ.cp2[1,2])
 
 # import hybriddata
-hybriddata <- fread("../data/Hybrid_flora_of_the_British_Isles/hybriddata_Stace4_removed.csv")
+hybriddata <- fread("./data/Hybrid_flora_of_the_British_Isles/hybriddata_Stace4_removed.csv")
 hybriddata$BOTH <- paste(hybriddata$`Parent A`, hybriddata$`Parent B`, sep = " ")
 dist.sequ.cp2$BOTH <- paste(dist.sequ.cp2$rn, dist.sequ.cp2$variable, sep = " ")
 
@@ -257,16 +257,41 @@ dist.sequ.its4[Genus1 == "Potamogeton"] %>%
   # 5 hybrid combinations with sequences
 dim(dist.sequ.cp3[Genus1 == "Potamogeton" & Genus2 == "Potamogeton"])[1] # out of 231 possible combinations
 
+# import the tree
+TREE <- read.tree(file = "./Barcoding_Phylogeny_Dating/DNA_Barcoding.dated.treefile")
+D <- cophenetic.phylo(TREE)
+dist.tree <- setDT(as.data.frame(as.matrix(D)), keep.rownames = TRUE)
+dist.tree2 <- melt(dist.tree)
+dist.tree2 <- dist.tree2[!is.nan(value),]
+dist.tree2$rn <- gsub(pattern = "_", replacement = " ", x = dist.tree2$rn)
+dist.tree2$variable <- gsub(pattern = "_", replacement = " ", x = dist.tree2$variable)
+
+dist.tree2$BOTH <- paste(dist.tree2$rn, dist.tree2$variable, sep = " ")
+
+dist.tree2$test2 <- unlist(lapply(lapply(strsplit(x = dist.tree2$BOTH, split = " "), sort), function(x) paste(x, collapse = "")))
+dist.tree3 <- unique(dist.tree2, by = "test2")
+
+dist.tree3[,test := dist.tree3$test2 %in% hybriddata$test2]
+
+# filter data when taxa is not congeneric
+# create genus columns for parent 1 and 2
+dist.tree3$Genus1 <- sub(" .*", "", dist.tree3$rn) 
+dist.tree3$Genus2 <- sub(" .*", "", dist.tree3$variable) 
+
+# filter where genus of both parents are the same!
+dist.tree4 <- dist.tree3[Genus1 == Genus2 & rn != variable]
+
 # both boxplots on the same plot
 
 dist.sequ.its4[, Marker := "ITS"]
 dist.sequ.cp4[, Marker := "Plastid"]
+dist.tree4[, Marker := "Tree"]
 
-bothbox <- rbind(dist.sequ.its4, dist.sequ.cp4)
+bothbox <- rbind(dist.sequ.its4, dist.sequ.cp4, dist.tree4)
 
 (bothboxplot <- ggplot(bothbox, aes(x=test, y=value))+ geom_jitter(col = "tomato", alpha=0.1)+
   geom_boxplot(alpha = 0, size = 1.5)+
-  facet_wrap(~ Marker)+
+  facet_wrap(~ Marker, scales = "free_y")+
   theme_bw(base_line_size = 0)+
   theme(strip.background = element_rect(fill = "white", colour = "white"), 
         strip.text = element_text(size = 30),
@@ -277,11 +302,11 @@ bothbox <- rbind(dist.sequ.its4, dist.sequ.cp4)
         legend.text = element_text(size = 20),
         legend.title = element_text(size = 20))+
     scale_x_discrete(limits = rev(c("TRUE", "FALSE")), labels = rev(c("Yes", "No")))+
-  ylab(label = "Genetic distance")+
+  ylab(label = "Genetic distance/Divergence time (Mya)")+
   xlab(label = "Hybrid formed between a pair of taxa?"))
 
-ggsave(filename = "../figures/Main/Genetic_distance_boxplots.pdf", plot = bothboxplot, 
-       device = "pdf", width = 9, height = 11, units = "in")
+ggsave(filename = "./figures/Main/Genetic_distance_boxplotsd.pdf", plot = bothboxplot, 
+       device = "pdf", width = 11, height = 11, units = "in")
 
 ##### Part 2.2: Ranking genera for mean genetic distance #####
 
@@ -350,4 +375,6 @@ ggplot(cor.dist[!is.na(value) & !is.na(i.value),], mapping = aes(x = value, y = 
   ylab(label = "Plastid distances")+
   guides(colour=guide_legend(title="Hybrid formed?"),
          alpha = guide_legend(title="Hybrid formed?"))
+
+
 

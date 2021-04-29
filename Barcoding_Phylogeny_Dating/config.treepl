@@ -1,0 +1,115 @@
+# phylogeny
+treefile = ./DNA_Barcoding.treefile
+
+# general
+# numsites
+numsites = 38955
+thorough
+
+# find the best parameters
+# prime
+
+# 20 family calibrations + eudicots, monocots & angiosperms
+
+# calibrations
+mrca = ANGIOSPERMAE Nymphaea_alba Acer_campestre
+min = ANGIOSPERMAE 129.4
+max = ANGIOSPERMAE 132.1
+
+mrca = MONOCOTYLEDONAE Spirodela_polyrrhiza Agrostis_canina
+min = MONOCOTYLEDONAE 113
+max = MONOCOTYLEDONAE 113
+
+mrca = EUDICOTYLEDONAE Papaver_rhoeas Acer_campestre
+min = EUDICOTYLEDONAE 125
+max = EUDICOTYLEDONAE 125
+
+mrca = NYMPHAECEAE Nymphaea_alba Nuphar_lutea
+min = NYMPHAECEAE 110.8
+max = NYMPHAECEAE 110.8
+
+mrca = CERATOPHYLLACEAE Ceratophyllum_submersum Ceratophyllum_demersum
+min = CERATOPHYLLACEAE 100.5
+max = CERATOPHYLLACEAE 127.2
+
+mrca = ALISMATACEAE Sagittaria_sagittifolia Alisma_gramineum
+min = ALISMATACEAE 23.03
+max = ALISMATACEAE 72.1
+
+mrca = ASPARAGACEAE Asparagus_officinalis Ornithogalum_pyrenaicum
+min = ASPARAGACEAE 14.5
+max = ASPARAGACEAE 22
+
+mrca = ARACEAE Arum_maculatum Spirodela_polyrrhiza
+min = ARACEAE 47
+max = ARACEAE 123
+
+mrca = ORCHIDACEAE Liparis_loeselii Anacamptis_pyramidalis
+min = ORCHIDACEAE 15
+max = ORCHIDACEAE 23.2
+
+mrca = POACEAE Cynodon_dactylon Agrostis_canina
+min = POACEAE 30.44
+max = POACEAE 66
+
+mrca = RANUNCULACEAE Caltha_palustris Aconitum_napellus
+min = RANUNCULACEAE 56
+max = RANUNCULACEAE 56
+
+mrca = MALVACEAE Tilia_platyphyllos Althaea_officinalis
+min = MALVACEAE 33.9
+max = MALVACEAE 72.1
+
+mrca = FABACEAE Ervilia_sylvatica Anthyllis_vulneraria
+min = FABACEAE 15
+max = FABACEAE 56
+
+mrca = CELASTRACEAE Euonymus_europaeus Parnassia_palustris
+min = CELASTRACEAE 37.8
+max = CELASTRACEAE 46.3
+
+mrca = SALICACEAE Populus_nigra Salix_triandra
+min = SALICACEAE 48.5
+max = SALICACEAE 48.5
+
+mrca = POLYGONACEAE Fallopia_convolvulus Bistorta_vivipara
+min = POLYGONACEAE 66
+max = POLYGONACEAE 66
+
+mrca = ERICACEAE Andromeda_polifolia Pyrola_rotundifolia
+min = ERICACEAE 66
+max = ERICACEAE 66
+
+mrca = APIACEAE Sanicula_europaea Aegopodium_podagraria
+min = APIACEAE 41.2
+max = APIACEAE 66
+
+mrca = ASTERACEAE Saussurea_alpina Achillea_maritima
+min = ASTERACEAE 47.46
+max = ASTERACEAE 72.1
+
+mrca = LAMIACEAE Ajuga_chamaepitys Lycopus_europaeus
+min = LAMIACEAE 27.82
+max = LAMIACEAE 27.82
+
+mrca = SOLANACEAE Atropa_belladonna Solanum_americanum
+min = SOLANACEAE 33.9
+max = SOLANACEAE 52.22
+
+mrca = CAPRIFOLIACEAE Lonicera_periclymenum Linnaea_borealis
+min = CAPRIFOLIACEAE 5.33
+max = CAPRIFOLIACEAE 34.07
+
+mrca = FAGACEAE Fagus_sylvatica Castanea_sativa
+min = FAGACEAE 37.8
+max = FAGACEAE 37.8
+
+
+# optimised parameters
+opt = 5
+optad = 5
+optcvad = 3
+moredetailcvad
+
+# output
+outfile = DNA_Barcoding.dated.treefile
