@@ -10,10 +10,10 @@
 
 <sup>4</sup>57, Aberdulais Road, Cardiff, UK (?).
 
-<sup>5</sup>Author for correspondence (email: max.brown@ed.ac.uk)
+<sup>5</sup>Author for correspondence: Alex Twyford (email: alex.twyford@ed.ac.uk)
 
 ### Notes
 
 This repository contains all the code and data neccesary to reproduce analyses in the manuscript "The genetic landscape of hybridisation in the British Flora"
 
-Work in progress but nearly complete.
+Some cleaning up left to do Alex, I guess we will want to delete the manuscripts directory before it goes public.
