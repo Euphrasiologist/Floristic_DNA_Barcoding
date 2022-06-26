@@ -239,7 +239,7 @@ vcv4$Sp1<-factor(vcv4$Sp1, levels=levels(vcv4$Sp2))
 vcv4d$T1<-factor(vcv4d$T1, levels=levels(vcv4d$T2))
 vcv4d$Sp1<-factor(vcv4d$Sp1, levels=levels(vcv4d$Sp2))
 
-# load(file = "../data/Backups/vcv4.RData")
+# load(file = "./data/Backups/vcv4.RData")
 
 ## NOT USED IN THE MANUSCRIPT (but here for completeness.) ##
 
@@ -410,6 +410,7 @@ mcmc.vcv5d <- MCMCglmm(y ~ dist2 + Hectads_shared + Annual_Perennial + Genus.Siz
                        thin = 10*100,
                        burnin = 3000*100)
 save(mcmc.vcv5d, file = "./data/Backups/mcmc.vcv5d.RData")
+load("./data/Backups/mcmc.vcv5d.RData")
 summary(mcmc.vcv5d)
 
 # relative importance of coefficients
@@ -514,7 +515,7 @@ col_fun <- colorRampPalette(colors = c(cbPalette[1], cbPalette[2]))
 
 pdf(file = "./figures/Supplementary/Correlation_genetic_geographic_mod_output_vcv5d.pdf")
 lattice::levelplot(t(vec), col.regions=col_fun(1000), 
-                   ylab = "Branch length", xlab = "Hectad sharing",
+                   ylab = "Branch length (Mya)", xlab = "Hectad sharing",
                    scales = list(tck = c(1,0), x = list(rot=45)))
 dev.off()
   
@@ -546,7 +547,7 @@ mcmc.vcv5.plot <- function(){
     geom_line(size = 1, lty = 2, aes(y = ylo))+
     geom_vline(xintercept = vcv5d[, .(mean(dist2)), by = .(Genus1)][, .(mean(V1))][1]$V1, lty =2, col = cbPalette[7], size = 2) +
     #xlab(label = "Branch length distance between two parental species") +
-    xlab(label = "Divergence time between (mya) two parental species") +
+    xlab(label = "Divergence time between two parental species (Mya)") +
     ylab(label = "Probability of forming a hybrid")+
     theme_bw()+
     theme(axis.title.x = element_text(size = 30),
@@ -673,6 +674,8 @@ vcv6d<-subset(vcv6d, !is.na(Hectads_shared))
 vcv6d$Cross_Ploid <- relevel(x = vcv6d$Cross_Ploid, ref = "Homoploid")
 save(vcv6d, file = "./data/Backups/vcv6d.RData")
 
+load("./data/Backups/vcv6d.RData")
+
 ### test run on ploidy dataset... ###
 # from 568 species in the old run, to 684 species.
 tree.ploidd <- ape::drop.tip(tree.4d, tree.4d$tip.label[!tree.4d$tip.label %in% union(vcv6d$Sp1, vcv6d$Sp2)])
@@ -702,6 +705,7 @@ mcmc.ploidd <- MCMCglmm(y ~ dist2 + Cross_Ploid + Hectads_shared + Annual_Perenn
 summary(mcmc.ploidd)
 
 save(mcmc.ploidd, file = "./data/Backups/mcmc.ploidd.RData")
+load("./data/Backups/mcmc.ploidd.RData")
 
 write.csv(x = specify_decimal(summary(mcmc.ploidd)$solutions, 4),
           file = "./data/Model_outputs/mcmc.ploidd.summary.csv")
@@ -907,7 +911,7 @@ ploid_plot_2 <- function(){
     geom_ribbon(aes(ymin = lCI, ymax = uCI, fill = `Parental Ploidy`), alpha = 0.15) +
     geom_line(aes(y = uCI), lty = 2, size =1.2) +
     geom_vline(xintercept = vcv6d[, .(mean(dist2)), by = .(Genus1)][, .(mean(V1))][1]$V1, lty =2, col = cbPalette[7], size = 2) +
-    xlab(label = expression(paste("Divergence time between a pair of species"))) +
+    xlab(label = expression(paste("Divergence time between a pair of species (Mya)"))) +
     ylab(label = "Probability of forming a hybrid")+
     theme_bw()+
     theme(axis.title.x = element_text(size = 30),
@@ -922,7 +926,7 @@ ploid_plot_2 <- function(){
     scale_color_manual(values = c(cbPalette[1], cbPalette[2]))
 }
 ploid_plot_2()
-ggsave(filename = "../figures/Supplementary/Cross_ploid_branch.pdf", plot = ploid_plot_2(), width = 12, height = 9, device = "pdf")
+ggsave(filename = "./figures/Supplementary/Cross_ploidd_branch.pdf", plot = ploid_plot_2(), width = 12, height = 9, device = "pdf")
 
 # phylogenetic variance ~58%
 p3 <- posterior.mode(treevar.ploidd/rowSums(cbind(treevar.ploidd, 

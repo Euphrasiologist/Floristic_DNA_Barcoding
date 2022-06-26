@@ -206,7 +206,8 @@ tree.3 <- ape::drop.tip(phy = tree.2, tip = vec.tree)
 ##### Part 1.2: Plotting phylogeny #####
 
 # read it in again
-tree.3 <- ape::read.tree(file = "../data/Tree_files/tree.3.stace4")
+#tree.3 <- ape::read.tree(file = "./data/Tree_files/tree.3.stace4")
+tree.3 <- ape::read.tree(file = "./Barcoding_Phylogeny_Dating/DNA_Barcoding.dated.treefile")
 
 # use this to determine which clade to extract, should we want to
 ggtree(tree.3)+geom_tiplab(cex = 0.9)+geom_text2(aes(subset=!isTip, label=node), hjust=-.5)
@@ -231,7 +232,7 @@ tree.3$tip.label <- gsub(tree.3$tip.label, pattern = " ", replacement = "_", fix
 ##### Part 2: Make sure that names match data and phylogeny #####
 
 # create the data that will plot the hybrid propensity.
-finaldata <- fread("../data/Hybrid_flora_of_the_British_Isles/finaldata_updated210220.csv")[,-"V1"]
+finaldata <- fread("./data/Hybrid_flora_of_the_British_Isles/finaldata_updated210220.csv")[,-"V1"]
 
 data <- data.table(
   factor = factor(rep(1, 1406)),
@@ -250,8 +251,8 @@ load("../data/Backups/tree.vcv5.RData")
 
 data_modes <- data.frame(
   factor = factor(rep(1, 1110)),
-  x = tree.vcv5$tip.label,
-  Taxa = gsub(pattern = "_", replacement = " ", x = tree.vcv5$tip.label, fixed = TRUE)
+  x = tree.vcv5d$tip.label,
+  Taxa = gsub(pattern = "_", replacement = " ", x = tree.vcv5d$tip.label, fixed = TRUE)
 )
 # make it a data table
 setDT(data_modes); data_modes
@@ -264,7 +265,7 @@ data_modes$Genus <- gsub(pattern = " .*", replacement = "", x = data_modes$Taxa)
 palette(RColorBrewer::brewer.pal(8, name = "Greens"))
 cbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 # make the dendrogram
-dend_modes <- phylogram::as.dendrogram(phytools::force.ultrametric(tree.vcv5))
+dend_modes <- phylogram::as.dendrogram(phytools::force.ultrametric(tree.vcv5d))
 # extract the height of the dendrogram
 dend_modes_height <- attr(dend_modes, "height")
 # make sure row order is preserved (before or after merge?)
@@ -282,7 +283,7 @@ data2_modes <- data2_modes[higher_orders, on = "Genus"]
 #posterior modes of the probability of each taxon hybridising
 load("../data/Backups/mcmc.vcv5.RData") # or another run of mcmc.vcv5. May not upload as it's 100+Mbs
 
-tree_modes <- VCVglmm::Solapply(mcmc.vcv5, FUN = mean)[Group == "Sp1"][order(-Grouped_Value)]
+tree_modes <- VCVglmm::Solapply(mcmc.vcv5d, FUN = mean)[Group == "Sp1"][order(-Grouped_Value)]
 tree_modesp <- tree_modes[!grepl("Node", Variable)][, Taxa := substring(Variable, 5)]
 
 
@@ -292,10 +293,9 @@ data2.1_both <- data2[, .(Taxa, Hybrid_propensity)][data2.1_modes, on = .(Taxa)]
 #data2.1_both[, Hybrid_propensity := ifelse(is.na(Hybrid_propensity), 0, Hybrid_propensity)]
 
 # create scaled hybrid propensity.
-# get genus size from 
-load(file = "../data/Backups/vcv5.RData")
+# get genus size from vcv5d
 
-data2.1_both <- data2.1_both[unique(vcv5[, .(Genus = Genus1, Genus.Size)]), on = .(Genus)]
+data2.1_both <- data2.1_both[unique(vcv5d[, .(Genus = Genus1, Genus.Size)]), on = .(Genus)]
 # remove NA
 data2.1_both <- data2.1_both[!is.na(Taxa)]
 
@@ -312,17 +312,17 @@ data2.1_both$Hybrid_propensity <- data2.1_both$Hybrid_propensity/data2.1_both$Ge
 data2.1_both$Hybrid_propensity <- ifelse(is.na(data2.1_both$Hybrid_propensity),
                                          0, data2.1_both$Hybrid_propensity)
 
-treevar.vcv5 <- VCVglmm::Bbar(phylo = tree.vcv5, type = "Species")*mcmc.vcv5$VCV[,"Sp1+Sp2"]
+treevar.vcv5d <- VCVglmm::Bbar(phylo = tree.vcv5d, type = "Species")*mcmc.vcv5d$VCV[,"Sp1+Sp2"]
 # make the estimates of the mode on the probability scale, averaged over random effects
 marg_post_mode <- pnorm(
-  summary(mcmc.vcv5)$solutions[1, 1] + # intercept
-    summary(mcmc.vcv5)$solutions[3, 1] * mean(vcv5$Hectads_shared) + # at mean hectad sharing
-    summary(mcmc.vcv5)$solutions[6, 1] * mean(vcv5$Genus.Size) + # at mean genus size
-    summary(mcmc.vcv5)$solutions[4, 1] + #annual - perennial hybridisation
-    summary(mcmc.vcv5)$solutions[2, 1] * mean(vcv5$dist2) +  # effect of branch length
+  summary(mcmc.vcv5d)$solutions[1, 1] + # intercept
+    summary(mcmc.vcv5d)$solutions[3, 1] * mean(vcv5d$Hectads_shared) + # at mean hectad sharing
+    summary(mcmc.vcv5d)$solutions[6, 1] * mean(vcv5d$Genus.Size) + # at mean genus size
+    summary(mcmc.vcv5d)$solutions[4, 1] + #annual - perennial hybridisation
+    summary(mcmc.vcv5d)$solutions[2, 1] * mean(vcv5d$dist2) +  # effect of branch length
     data2.1_both$Mode,
   sd = sqrt(mean(
-    mcmc.vcv5$VCV[, "units"] + 2 * mcmc.vcv5$VCV[, "T1+T2"] + treevar.vcv5 # accounting for phylogeny
+    mcmc.vcv5d$VCV[, "units"] + 2 * mcmc.vcv5d$VCV[, "T1+T2"] + treevar.vcv5d # accounting for phylogeny
   ))
 ) 
 data2.1_both[, marg_post_mode := marg_post_mode]
@@ -347,8 +347,8 @@ circos.trackPlotRegion(factors = data2.1_both$factor, y=data2.1_both$Mean, panel
                     N =.N), by = "Order"][, -4][order(-N)][1:20,]
   dat <- as.data.frame(lapply(dat, unlist))
   for(i in 1:10){
-    circos.lines(x = c(dat[i,2], dat[i, 3]), y = c(1.9, 1.9), col = 5, lwd = 4) # line
-    circos.text(x = mean(c(dat[i,2], dat[i, 3])), y = 2.8, 
+    circos.lines(x = c(dat[i,2], dat[i, 3]), y = c(2.9, 2.9), col = 5, lwd = 4) # line
+    circos.text(x = mean(c(dat[i,2], dat[i, 3])), y = 3.8, 
                 labels = paste(as.character(dat[i,1])), 
                 facing = "outside", 
                 niceFacing = TRUE, cex = 3) # label 
@@ -364,7 +364,7 @@ circos.trackPlotRegion(factors = data2.1_both$factor, y=data2.1_both$Mean, panel
   dat2 <- dat2[1:5,]
   dat2$ID <- c(1:5)
   for(i in 1:5){
-    circos.lines(x = c(dat2[i,2], dat2[i, 3]), y = c(1.5, 1.5), col = 1, lwd = 1, lty = 2, area = TRUE) # line
+    circos.lines(x = c(dat2[i,2], dat2[i, 3]), y = c(2, 2), col = 1, lwd = 1, lty = 2, area = TRUE) # line
     circos.text(x = mean(c(dat2[i,2], dat2[i, 3])), y = -1.5, 
                 labels = paste(as.character(dat2[i,6])), 
                 facing = "outside", 
@@ -381,7 +381,7 @@ circos.trackLines(factors = data2.1_both$factor, x = data2.1_both$pos, y = rep(0
 # order messed up otherwise
 circos.trackLines(factors = data2.1_both[order(pos)]$factor, x = data2.1_both[order(pos)]$pos, y = data2.1_both[order(pos)]$Mean, col = cbPalette[3], lwd=4.5)
 # hybrid propensity
-circos.trackPlotRegion(factors = data2.1_both$factor, y=data2.1_both$Hybrid_propensity,ylim = c(0,2), panel.fun = function(x,y){
+circos.trackPlotRegion(factors = data2.1_both$factor, y=data2.1_both$Hybrid_propensity,ylim = c(0,6), panel.fun = function(x,y){
   circos.yaxis(side = "right", labels.niceFacing = TRUE, labels.cex = 1.5)
 })
 circos.trackLines(factors = data2.1_modes$factor, x = data2.1_modes$pos, y = data2.1_both$Hybrid_propensity, col = 6, lwd=4.5)

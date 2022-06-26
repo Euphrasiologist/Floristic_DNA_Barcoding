@@ -9,6 +9,7 @@ library(ape)
 library(seqinr)
 library(data.table)
 library(Taxonstand)
+library(ggplot2)
 
 `%!in%` <- function(x,y)!('%in%'(x,y))
 
@@ -246,6 +247,7 @@ dist.sequ.its4[test == TRUE][order(value)][1:20,]
 # Is hybridisation restricted to closely related taxa?
 # Or if hybridisation has homogenised species differences by introgression or chloroplast capture...
 # Potamegeton produces sterile hybrids so it cannot be explanation two.
+library(dplyr)
 
 dist.sequ.its4[Genus1 == "Potamogeton"] %>%
   ggplot(aes(x = test, y = value))+
@@ -289,9 +291,11 @@ dist.tree4[, Marker := "Tree"]
 
 bothbox <- rbind(dist.sequ.its4, dist.sequ.cp4, dist.tree4)
 
-(bothboxplot <- ggplot(bothbox, aes(x=test, y=value))+ geom_jitter(col = "tomato", alpha=0.1)+
+library(cowplot)
+
+(bothboxplot <- ggplot(bothbox[Marker %in% c("ITS", "Plastid")], aes(x=test, y=value))+ geom_jitter(col = "tomato", alpha=0.1)+
   geom_boxplot(alpha = 0, size = 1.5)+
-  facet_wrap(~ Marker, scales = "free_y")+
+  facet_wrap(~ Marker)+
   theme_bw(base_line_size = 0)+
   theme(strip.background = element_rect(fill = "white", colour = "white"), 
         strip.text = element_text(size = 30),
@@ -302,10 +306,41 @@ bothbox <- rbind(dist.sequ.its4, dist.sequ.cp4, dist.tree4)
         legend.text = element_text(size = 20),
         legend.title = element_text(size = 20))+
     scale_x_discrete(limits = rev(c("TRUE", "FALSE")), labels = rev(c("Yes", "No")))+
-  ylab(label = "Genetic distance/Divergence time (Mya)")+
-  xlab(label = "Hybrid formed between a pair of taxa?"))
+  ylab(label = "Genetic distance") + xlab(label = ""))
 
+breaks <- c(-2.302585, 0, 2.302585, 3.912023, 5.298317) # 1, 50, 100, 150, 200
+labels <- c(0.1, round(c(exp(0), 10, exp(3.912023), exp(5.298317)), 0))
+
+(treeboxplot <- ggplot(bothbox[Marker %in% c("Tree")], aes(x=test, y=log(value)))+ geom_jitter(col = "tomato", alpha=0.1)+
+    geom_boxplot(alpha = 0, size = 1.5)+
+    facet_wrap(~ Marker)+
+    theme_bw(base_line_size = 0)+
+    theme(strip.background = element_rect(fill = "white", colour = "white"), 
+          strip.text = element_text(size = 30),
+          axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30),
+          axis.text.x = element_text(size = 30),
+          axis.text.y =  element_text(size = 30),
+          legend.text = element_text(size = 20),
+          legend.title = element_text(size = 20))+
+    scale_x_discrete(limits = rev(c("TRUE", "FALSE")), labels = rev(c("Yes", "No")))+
+    scale_y_continuous(
+      breaks = breaks,
+      labels = labels) +
+    ylab(label = "Divergence time (Mya)") + 
+    xlab(label = ""))
+
+# merge plots
+library(grid)
+library(gridExtra)
+x.grob <- textGrob("Hybrid formed between two taxa?", 
+                   gp=gpar(col="black", fontsize=25, fontfamily = "Helvetica"))
+both_distances <- cowplot::plot_grid(bothboxplot, treeboxplot, rel_widths = c(1.5, 1))
+save_both_distances <- grid.arrange(arrangeGrob(both_distances, bottom = x.grob))
+# 
 ggsave(filename = "./figures/Main/Genetic_distance_boxplotsd.pdf", plot = bothboxplot, 
+       device = "pdf", width = 11, height = 11, units = "in")
+ggsave(filename = "./figures/Main/All_distances_boxplots.pdf", plot = save_both_distances, 
        device = "pdf", width = 11, height = 11, units = "in")
 
 ##### Part 2.2: Ranking genera for mean genetic distance #####
