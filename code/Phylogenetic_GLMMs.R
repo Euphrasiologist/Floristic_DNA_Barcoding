@@ -130,9 +130,11 @@ annper <- fread("./data/Trait_databases/annual_perennial_britf_fl.csv")
 name_changes <- fread("./data/Hybrid_flora_of_the_British_Isles/name_changes.csv")
 name_changes <- name_changes[-1, .(Species = V2, New.Species = V3)]
 # standardise the names
+# I dont know when this will be deprecated
 annpernames <- Taxonstand::TPL(annper$prefTaxonName, silent = FALSE)
 # set as a data table
 setDT(annpernames)
+fwrite(annpernames, file = "./data/Trait_databases/annpernames.csv")
 # bind the updated names to the annual perennial columns
 annper2 <- cbind(annpernames[, .(Species = paste(New.Genus, New.Species, sep = " "))], annper[, .(AnnPer = dataValue)])
 
@@ -463,7 +465,8 @@ sddist2 <- sd(vcv5d$dist2)
 sdHectads_shared <- sd(vcv5d$Hectads_shared)
 sdGenus <- sd(vcv5d$Genus.Size)
 
-VCVglmm::posterior.sd(mcmc.vcv5d)
+post_sd_vcv5d <- VCVglmm::posterior.sd(mcmc.vcv5d)
+fwrite(post_sd_vcv5d, "./data/Model_outputs/post_sd_vcv5d.csv")
 
 # seems like genetic distance mode important [not sure about the annual-perennial categorical covariates]
 write.csv(
@@ -687,6 +690,9 @@ ggsave(filename = "./figures/Supplementary/Pairwise_overlap_model1d.pdf", plot =
 
 # extract the posterior modes, which are the greatest in value?
 tree_modesd <- VCVglmm::Solapply(mcmc.vcv5d, mean)[Group == "Sp1"][order(-Grouped_Value)]
+fwrite(tree_modesd[, .(species_or_node = Variable, posterior_mean = Grouped_Value)], 
+  "./data/Model_outputs/posterior_mean_phylogenetic_blups_vcv5d.csv"
+  )
 # can we subset the important nodes? 1053, 68 (top), 450, 225
 tree_modes2d <- tree_modesd[grepl("Node", Variable)][, Variable := substring(Variable, 9)]
 # tree_modes3d <- tree_modes2d[Variable %in% c(1059, 75, 207, 457)]
