@@ -18,7 +18,7 @@ library(dplyr)
 ##### Q1. What is the distribution of hybrid propensity? How many hybrids analysed? #####
 
 # requires dat2_1.csv
-data2.1 <- fread(file = "../data/Backups/data2.1_both200220.csv")
+data2.1 <- fread(file = "./data/Backups/data2.1_both200220.csv")
 # add genus size
 data2.1 <- data2.1[,.(Taxa, Hybrid_propensity, Genus.Size = .N), by = .(Genus)]
 # adjusted the smoothing parameter, it's an exponentially decaying distribution.
@@ -78,13 +78,15 @@ data2.3[Genus.Size >=5 & Hybridising_genera == TRUE, .(Mdist = mean(value)), by 
 dist.sequ.cp4[test == TRUE][,.(Mdist = mean(value)), by = .(Genus1)][order(-Mdist)]
 
 # ITS
-
+# merge with data created from Genetic_distance_matrices.R
 data2.4 <- mer[dist.sequ.its4, on = "Genus1"]
 
 # all genera with >= 5 species, hybridising or not.
-data2.4[Genus.Size >=5, .(Mdist = mean(value)), by = "Genus1"][order(-Mdist)]
+data2.4[Genus.Size >= 5, .(Mdist = mean(value)), by = "Genus1"][order(-Mdist)]
 # only hybridising taxa
-data2.4[Genus.Size >=5 & test == TRUE, .(Mdist = mean(value), N=.N), by = "Genus1"][order(-Mdist)]
+its_5plus_taxa_dist_hybs <- data2.4[Genus.Size >=5 & test == TRUE, .(Mdist = mean(value), N=.N), by = "Genus1"][order(-Mdist)]
+
+fwrite(its_5plus_taxa_dist_hybs, "./data/supp_its_5plus_taxa_dist_genera.csv")
 
 ## THIS BIT IS IN THE MANUSCRIPT ##
 # only hybridising genera
