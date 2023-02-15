@@ -2,7 +2,7 @@
 # Max R. Brown, Peter M. Hollingsworth, Laura Forrest, Michelle Hart, Laura Jones, Col Ford, Tim Rich, Natasha de Vere, Alex D. Twyford #
 
 # All code Max Brown #
-# Last updated: 04.06.20 #
+# Last updated: 05.02.23 #
 
 # Libraries needed #
 # install_github("Euphrasiologist/VCVglmm")
@@ -17,8 +17,6 @@ library(devtools)
 library(VCVglmm)
 library(gridExtra)
 library(lattice)
-
-# functions specified #
 
 # useful little function that splits a character vector and then sorts it
 # alphabetically after the split.
@@ -39,58 +37,50 @@ Mode <- function(x) {
 
 # The simplest possible model here, with no explanatory variables.
 # This is because we are simply interested in variance components
-tree.3 <- read.tree(file = "./data/Tree_files/tree.3.stace4")
-tree.3$tip.label <- gsub(pattern = "_", replacement = " ", tree.3$tip.label)
-tree.3 # 1406 tips!
 
-tree.3d <- read.tree(file = "./Barcoding_Phylogeny_Dating/DNA_Barcoding.dated.treefile")
-tree.3d$tip.label <- gsub(pattern = "_", replacement = " ", tree.3d$tip.label)
-tree.3d # also 1406 tips.
+# See the `Barcoding_Phylogeny_Dating` directory for more information.
+dated_tree <- read.tree(
+  file = "./Barcoding_Phylogeny_Dating/DNA_Barcoding.dated.treefile"
+)
 
+dated_tree$tip.label <- gsub(
+  pattern = "_",
+  replacement = " ", dated_tree$tip.label
+)
+# dated_tree has 1406 tips
+
+# remove node labels from the tree
 # otherwise the inverseA function fails.
-tree.3$node.label <- NULL
-tree.3d$node.label <- NULL
-
+dated_tree$node.label <- NULL
 
 # multi membership model
-# y <- vector of 0's and 1's as to whether a species pair gave rise to a successful hybrid or not
+# y <- vector of 0's and 1's
+# as to whether a species pair gave
+# rise to a successful hybrid or not
 # Sp1 <- vector of species 1
 # Sp2 <- vector of species 2
 # T1 <- copy of Sp1
 # T2 <- copy of Sp2
 # dist <- variance covariance matrix of phylogeny
-# cooc <- co-occurrence of parental taxa (would be good if I could get the data!!)
+# cooc <- co-occurrence of parental taxa
 
 # Sp1, Sp2 and the VCV
 # just to generate the pairwise comparisons, vcv values discarded later.
-v <- vcv(tree.3)
-vd <- vcv(tree.3d)
+vd <- vcv(dated_tree)
 
 # create the data table object
-vcv1 <- data.table(as.data.frame(as.matrix(v)), keep.rownames = TRUE)
-vcv2 <- melt.data.table(vcv1)
-setnames(x = vcv2, old = c("rn", "variable", "value"), new = c("Sp1", "Sp2", "dist"))
-
 # for the dated tree
 vcv1d <- data.table(as.data.frame(as.matrix(vd)), keep.rownames = TRUE)
 vcv2d <- melt.data.table(vcv1d)
-setnames(x = vcv2d, old = c("rn", "variable", "value"), new = c("Sp1", "Sp2", "date_div"))
+setnames(
+  x = vcv2d,
+  old = c("rn", "variable", "value"), new = c("Sp1", "Sp2", "date_div")
+)
 
 # create column which we can sort on later (expensive call)
-vcv2[, On := sort_names(paste(Sp1, Sp2, sep = " "))]
-
 vcv2d[, On := sort_names(paste(Sp1, Sp2, sep = " "))]
 # remove dist, updated dist2 below
-vcv2 <- vcv2[, -"dist"]
-
-# remove dist, updated dist2 below
 vcv2d <- vcv2d[, -"date_div"]
-
-# genus columns
-vcv2[, c("Genus1", "Genus2") := list(
-  gsub(" .*", "", Sp1),
-  gsub(" .*", "", Sp2)
-)]
 
 # genus columns
 vcv2d[, c("Genus1", "Genus2") := list(
@@ -99,33 +89,25 @@ vcv2d[, c("Genus1", "Genus2") := list(
 )]
 
 # these are all of the hybrids.
-hybriddata <- fread("./data/Hybrid_flora_of_the_British_Isles/hybriddata_Stace4_removed.csv")
-merg <- hybriddata[, On := sort_names(paste(`Parent A`, `Parent B`, sep = " "))][, .(
+hybriddata <- fread(
+  # a digital cleaned rendition of the `Hybrid Flora of the British Isles`
+  "./data/Hybrid_flora_of_the_British_Isles/hybriddata_Stace4_removed.csv"
+)
+merg <- hybriddata[
+  ,
+  On := sort_names(
+    paste(`Parent A`, `Parent B`, sep = " ")
+  )
+][, .(
   On = On,
   y = 1
 )]
 # merge the data sets
-vcv3 <- merg[vcv2, on = "On"]
-
 vcv3d <- merg[vcv2d, on = "On"]
 
-# let's add in the annual perennial data.
+# add in the annual perennial data.
 # need to download from the bsbi website and standardise names.
-
-# Are all hybrids represented? No... what's going on???
-# it's because the phylogeny is not entirely sequenced/correct.
-# Nothing that can be done about this right now.
-setdiff(
-  merg$On[grepl(pattern = "Euphrasia", merg$On)],
-  vcv3[Genus1 == "Euphrasia" & y == 1 & !duplicated(On)]$On
-)
-
-setdiff(
-  merg$On[grepl(pattern = "Euphrasia", merg$On)],
-  vcv3d[Genus1 == "Euphrasia" & y == 1 & !duplicated(On)]$On
-)
-
-# add in data on annual and perennial species. From https://database.bsbi.org/checklists.php
+# From https://database.bsbi.org/checklists.php
 annper <- fread("./data/Trait_databases/annual_perennial_britf_fl.csv")
 name_changes <- fread("./data/Hybrid_flora_of_the_British_Isles/name_changes.csv")
 name_changes <- name_changes[-1, .(Species = V2, New.Species = V3)]
@@ -225,7 +207,7 @@ for (names in as_factord) {
 
 # tree manipulation
 tree.4 <- tree.3
-tree.4d <- tree.3d
+tree.4d <- dated_tree
 # remove tips that are not in both Sp1 and Sp2 (can Jarrod explain this please?)
 tree.5 <- ape::drop.tip(tree.4, tree.4$tip.label[
   !tree.4$tip.label %in% union(vcv4$Sp1, vcv4$Sp2)
@@ -690,9 +672,10 @@ ggsave(filename = "./figures/Supplementary/Pairwise_overlap_model1d.pdf", plot =
 
 # extract the posterior modes, which are the greatest in value?
 tree_modesd <- VCVglmm::Solapply(mcmc.vcv5d, mean)[Group == "Sp1"][order(-Grouped_Value)]
-fwrite(tree_modesd[, .(species_or_node = Variable, posterior_mean = Grouped_Value)], 
+fwrite(
+  tree_modesd[, .(species_or_node = Variable, posterior_mean = Grouped_Value)],
   "./data/Model_outputs/posterior_mean_phylogenetic_blups_vcv5d.csv"
-  )
+)
 # can we subset the important nodes? 1053, 68 (top), 450, 225
 tree_modes2d <- tree_modesd[grepl("Node", Variable)][, Variable := substring(Variable, 9)]
 # tree_modes3d <- tree_modes2d[Variable %in% c(1059, 75, 207, 457)]

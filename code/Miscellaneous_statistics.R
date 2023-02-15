@@ -84,9 +84,7 @@ data2.4 <- mer[dist.sequ.its4, on = "Genus1"]
 # all genera with >= 5 species, hybridising or not.
 data2.4[Genus.Size >= 5, .(Mdist = mean(value)), by = "Genus1"][order(-Mdist)]
 # only hybridising taxa
-its_5plus_taxa_dist_hybs <- data2.4[Genus.Size >=5 & test == TRUE, .(Mdist = mean(value), N=.N), by = "Genus1"][order(-Mdist)]
-
-fwrite(its_5plus_taxa_dist_hybs, "./data/supp_its_5plus_taxa_dist_genera.csv")
+data2.4[Genus.Size >=5 & test == TRUE, .(Mdist = mean(value), N=.N), by = "Genus1"][order(-Mdist)]
 
 ## THIS BIT IS IN THE MANUSCRIPT ##
 # only hybridising genera
@@ -96,10 +94,11 @@ onlyhybs2[, N := .N, by = "Genus1"]
 onlyhybs2[, Hybridising_genera := ifelse(test = N == 2, yes = TRUE, no = test)]
 data2.5 <- unique(onlyhybs2[, .(Genus1, Hybridising_genera)])[data2.4, on = "Genus1"]
 # answer(s)
-data2.5[Genus.Size >=5 & Hybridising_genera == TRUE, .(Mdist = mean(value)), by = "Genus1"][order(-Mdist)]
+its_5plus_taxa_dist_hybs <- data2.5[Genus.Size >=5 & Hybridising_genera == TRUE, .(Mdist = mean(value)), by = "Genus1"][order(-Mdist)]
 data2.5[test == TRUE & Genus.Size >= 5, .(Mdist = mean(value), SE = sd(value)/sqrt(.N), N=.N), by = .(Genus1)][order(-Mdist)]
 
 # export these results?
+fwrite(its_5plus_taxa_dist_hybs, "./data/supp_its_5plus_taxa_dist_genera.csv")
 
 
 ##### Q4.1 Do annuals have on average lower genetic distance than perennials? #####
