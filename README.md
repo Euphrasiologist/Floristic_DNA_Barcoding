@@ -1,6 +1,6 @@
 ## Genetic factors predict hybrid formation in the British flora
 
-<b>Max R. Brown<sup>1,2</sup>, Peter M. Hollingsworth<sup>3</sup>, Laura Forrest<sup>3</sup>, Michelle Hart<sup>3</sup>, Ilia Leitch<sup>4</sup>, Laura Jones<sup>5</sup>, Col Ford<sup>5</sup>, Natasha de Vere<sup>6</sup>, Alex D. Twyford<sup>1,2</sup></b>
+<b>Max R. Brown<sup>1,2 *</sup>, Peter M. Hollingsworth<sup>3</sup>, Laura Forrest<sup>3</sup>, Michelle Hart<sup>3</sup>, Ilia Leitch<sup>4</sup>, Laura Jones<sup>5</sup>, Col Ford<sup>5</sup>, Natasha de Vere<sup>6</sup>, Alex D. Twyford<sup>1,2 *</sup></b>
 
 <sup>1</sup>University of Edinburgh, Institute of Evolutionary Biology, Charlotte Auerbach Road, Edinburgh, EH9 3FL, UK.
 
