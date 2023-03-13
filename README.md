@@ -1,19 +1,18 @@
-## The genetic landscape of hybridisation in the British flora
+## Genetic factors predict hybrid formation in the British flora
 
-<b>Max R. Brown<sup>1,5</sup>, Peter M. Hollingsworth<sup>2</sup>, Laura Forrest<sup>2</sup>, Michelle Hart<sup>2</sup>, Laura Jones<sup>3</sup>, Col Ford<sup>3</sup>, Tim Rich<sup>4</sup>, Natasha de Vere<sup>3</sup>, Alex D. Twyford<sup>1,2</sup></b>
+<b>Max R. Brown<sup>1,2</sup>, Peter M. Hollingsworth<sup>3</sup>, Laura Forrest<sup>3</sup>, Michelle Hart<sup>3</sup>, Ilia Leitch<sup>4</sup>, Laura Jones<sup>5</sup>, Col Ford<sup>5</sup>, Natasha de Vere<sup>6</sup>, Alex D. Twyford<sup>1,2</sup></b>
 
 <sup>1</sup>University of Edinburgh, Institute of Evolutionary Biology, Charlotte Auerbach Road, Edinburgh, EH9 3FL, UK.
 
-<sup>2</sup>Royal Botanic Garden Edinburgh, 20A Inverleith Row, Edinburgh, EH3 5LR, UK.
+<sup>2</sup>Wellcome Trust Genome Campus, Hinxton, CB10 1RQ.
 
-<sup>3</sup>Conservation and Research Department, National Botanical Garden of Wales, Llanarthne, Camarthenshire, UK
+<sup>3</sup>Royal Botanic Garden Edinburgh, 20A Inverleith Row, Edinburgh, EH3 5LR, UK.
 
-<sup>4</sup>57, Aberdulais Road, Cardiff, UK (?).
+<sup>4</sup>Royal Botanic Gardens, Kew, Richmond, Surrey, UK
 
-<sup>5</sup>Author for correspondence: Alex Twyford (email: alex.twyford@ed.ac.uk)
+<sup>5</sup>Conservation and Research Department, National Botanic Garden of Wales, Llanarthne, Carmarthenshire, SA32 8HG, UK
 
-### Notes
+<sup>6</sup>Natural History Museum of Denmark, University of Copenhagen, Copenhagen, Denmark
 
-This repository contains all the code and data neccesary to reproduce analyses in the manuscript "The genetic landscape of hybridisation in the British Flora"
+<sup>*</sup>Author for correspondence: Alex Twyford (email: alex.twyford@ed.ac.uk)
 
-Some cleaning up left to do Alex, I guess we will want to delete the manuscripts directory before it goes public.
