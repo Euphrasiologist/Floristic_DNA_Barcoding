@@ -14,5 +14,9 @@
 
 <sup>6</sup>Natural History Museum of Denmark, University of Copenhagen, Copenhagen, Denmark
 
-<sup>*</sup>Author for correspondence: Alex Twyford (email: alex.twyford@ed.ac.uk)
+<sup>*</sup>Authors for correspondece
+
+Email: Alex.Twyford@ed.ac.uk; mb39@sanger.ac.uk
+
+Author Contributions: ADT and PMH designed the research; LFH, MH, IJL, LJ, CF, NV provided data; MRB analysed the data; MRB and ADT wrote the paper, with contributions from other authors.
 
